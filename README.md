@@ -14,7 +14,7 @@ Each skill lives in its own directory and contains a `SKILL.md` file with instru
 
 ---
 
-## Skills Index (65 skills)
+## Skills Index (70 skills)
 
 | Skill | Description |
 |---|---|
@@ -82,8 +82,13 @@ Each skill lives in its own directory and contains a `SKILL.md` file with instru
 | [ux-writer](./ux-writer/SKILL.md) | Labels, buttons, helper text, empty states, error messages, and microcopy |
 | [video-generator](./video-generator/SKILL.md) | Professional AI video production workflow |
 | [weather-api](./weather-api/SKILL.md) | Weather data retrieval using the Open-Meteo API |
+| [customer-signal-synthesizer](./customer-signal-synthesizer/SKILL.md) | Synthesize scattered customer signals (support, NPS, churn, sales) into recurring patterns and actionable insights |
+| [interview-intelligence-analyst](./interview-intelligence-analyst/SKILL.md) | Deep analysis of full interview transcripts — themes, sentiment, emotional signals, and cross-participant comparison |
+| [positioning-strategist](./positioning-strategist/SKILL.md) | Category framing, value proposition, differentiation, messaging hierarchy, and homepage narrative |
+| [qa-executor](./qa-executor/SKILL.md) | Execute structured manual QA and exploratory testing — pass/fail recording, bug reports, and coverage gaps |
+| [retention-lifecycle-strategist](./retention-lifecycle-strategist/SKILL.md) | Diagnose lifecycle friction across activation, engagement, retention, resurrection, and expansion |
 | [workflow-designer](./workflow-designer/SKILL.md) | Task flow analysis, step sequence, handoffs, and completion paths |
 
 ---
 
-*Last updated: April 2026*
+*Last updated: April 2026 — 5 new skills added after audit (qa-executor, customer-signal-synthesizer, retention-lifecycle-strategist, positioning-strategist, interview-intelligence-analyst)*
