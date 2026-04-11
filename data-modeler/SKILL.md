@@ -1,6 +1,6 @@
 ---
 name: data-modeler
-description: 'Read this skill before designing or reviewing any data model, schema, or database structure. Trigger whenever the user asks about entities, relationships, schema design, or how to model data — including in Portuguese: "como modelar esses dados?", "que tabelas preciso?", "revise o schema", "como estruturar isso no banco?", "qual a relação entre essas entidades?". Not for system architecture, code-quality review, runtime performance diagnosis, or security review.'
+description: Use for entity design, schema shape, relationships, cardinality, data ownership, normalization trade-offs, and storage-model clarity. Not for system architecture, code-quality review, runtime performance diagnosis, or security review.
 ---
 
 # Data Modeler

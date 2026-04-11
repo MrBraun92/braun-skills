@@ -1,6 +1,6 @@
 ---
 name: security-reviewer
-description: 'Read this skill before addressing any security concern — auth, permissions, secrets handling, input validation, attack surface, or exploitability. Trigger whenever the user asks about security, mentions vulnerabilities, talks about authentication or authorization — including in Portuguese: "isso é seguro?", "analise a segurança", "tem vulnerabilidades?", "como proteger isso?", "autenticação está correta?". Not for code-quality review, general architecture critique, runtime performance analysis, or operational governance.'
+description: Use for auth, permissions, secrets, input handling, attack surface, exploitability risk, and security-sensitive design or implementation review. Not for code-quality review, general architecture critique, runtime performance analysis, or operational governance.
 ---
 
 # Security Reviewer

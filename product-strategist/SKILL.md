@@ -1,6 +1,6 @@
 ---
 name: product-strategist
-description: 'Read this skill before making any product direction, prioritization, or build-vs-cut decision. Trigger whenever the user asks what to build, what to prioritize, whether a feature is worth it, or how to focus the roadmap — including in Portuguese: "o que devemos construir?", "priorize isso", "vale a pena essa feature?", "qual o próximo passo do produto?", "o que cortamos?". Not for UX review, analytics diagnosis, workflow design, or implementation planning.'
+description: Use for feature prioritization, product direction, problem-solution fit, scope trade-offs, and prioritization decisions about what should be built, changed, delayed, or cut. Not for UX review, analytics diagnosis, workflow design, or implementation planning.
 ---
 
 # Product Strategist

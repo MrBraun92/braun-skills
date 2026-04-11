@@ -1,6 +1,6 @@
 ---
 name: performance-reviewer
-description: 'Read this skill before diagnosing any performance problem — latency, slowness, bottlenecks, query cost, rendering cost, throughput, or scale. Trigger whenever the user says something is slow, wants to optimize performance, or asks about scaling — including in Portuguese: "está lento", "por que demora tanto?", "otimize a performance", "como escalar isso?", "as queries estão pesadas". Not for code-quality review, general architecture critique, security review, product analytics, or production telemetry interpretation and log-signal analysis.'
+description: Use for runtime cost, latency, bottlenecks, query cost, rendering cost, throughput, and scale-related performance diagnosis. Not for code-quality review, general architecture critique, security review, or product analytics.
 ---
 
 # Performance Reviewer

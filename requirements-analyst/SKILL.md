@@ -1,6 +1,6 @@
 ---
 name: requirements-analyst
-description: 'Read this skill before clarifying, sharpening, or writing any product or feature requirements. Trigger whenever requirements feel ambiguous or a user asks what a feature needs to do — including in Portuguese: "o que essa feature precisa fazer?", "quais são os requisitos?", "transforme essa ideia em especificação", "defina o escopo disso", "quais os critérios de aceitação?". Not for deciding what to build, writing AI prompts, implementing features, or reviewing existing code.'
+description: Use for clarifying ambiguous requirements, identifying missing constraints, defining scope boundaries, generating acceptance criteria, and turning rough feature ideas into clearer, more buildable specifications. Not for deciding what to build, writing AI prompts, implementing features, or reviewing existing code.
 ---
 
 # Requirements Analyst

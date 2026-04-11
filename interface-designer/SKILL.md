@@ -1,6 +1,6 @@
 ---
 name: interface-designer
-description: 'Read this skill before giving any feedback on the visual design or layout of a screen, UI, or interface. Trigger whenever the user shares a UI and asks for critique or wants to improve visual clarity — including in Portuguese: "analise o design", "a interface está clara?", "melhore a hierarquia visual", "o layout está bom?", "como melhorar a aparência disso?". Not for mental model or persona interpretation, workflow design, copywriting, analytics, or accessibility compliance.'
+description: Use for visual hierarchy, layout, spacing, typography, component emphasis, scannability, and interface clarity in screens or UI systems. Not for mental model or persona interpretation, workflow design, copywriting, analytics, or accessibility compliance.
 ---
 
 # Interface Designer

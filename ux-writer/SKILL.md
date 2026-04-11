@@ -1,6 +1,6 @@
 ---
 name: ux-writer
-description: 'Read this skill before writing or improving any in-product copy — labels, buttons, helper text, empty states, or error messages. Trigger whenever the user asks what a button should say or wants UI text reviewed — including in Portuguese: "o que escrever nesse botão?", "como formular essa mensagem de erro?", "revise os textos da interface", "o que colocar no estado vazio?", "melhore essa mensagem de confirmação". Not for persona analysis, workflow design, visual design, or marketing copy.'
+description: Use for labels, buttons, helper text, empty states, error messages, confirmations, and microcopy that guide user action in interfaces. Not for persona analysis, workflow design, visual design, or marketing copy.
 ---
 
 # UX Writer

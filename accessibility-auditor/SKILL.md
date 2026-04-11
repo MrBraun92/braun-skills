@@ -1,6 +1,6 @@
 ---
 name: accessibility-auditor
-description: 'Read this skill before reviewing any interface for accessibility. Trigger whenever the user asks about accessibility, WCAG compliance, screen readers, keyboard navigation, or color contrast — including in Portuguese: "isso é acessível?", "funciona para deficientes?", "o contraste está bom?", "screen reader consegue ler?", "como tornar isso mais acessível?". Not for visual design critique, persona analysis, workflow redesign, or copywriting.'
+description: Use for contrast, focus states, keyboard navigation, readability, interaction accessibility, and WCAG-oriented accessibility review in interfaces. Not for visual design critique, persona analysis, workflow redesign, or copywriting.
 ---
 
 # Accessibility Auditor

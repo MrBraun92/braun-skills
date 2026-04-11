@@ -1,6 +1,6 @@
 ---
 name: test-strategist
-description: 'Read this skill before planning, designing, or advising on any test strategy or coverage approach. Trigger whenever the user asks what tests to write, how to test something, or what coverage is needed — including in Portuguese: "que testes devo escrever?", "como testar isso?", "quais edge cases cobrir?", "a estratégia de testes está boa?", "qual cobertura precisamos?". Not for release-time verification decisions, code-quality review, operational governance, runtime performance analysis, or security review.'
+description: Use for test strategy, coverage planning, regression risk, edge cases, and deciding what to verify at unit, integration, or end-to-end level. Not for code-quality review, operational governance, runtime performance analysis, or security review.
 ---
 
 # Test Strategist

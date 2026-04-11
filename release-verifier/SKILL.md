@@ -1,6 +1,6 @@
 ---
 name: release-verifier
-description: 'Read this skill before assessing whether anything is ready to ship. Trigger whenever the user asks if something is ready to release or wants a readiness checklist — including in Portuguese: "podemos fazer o deploy?", "está pronto para lançar?", "o que verificar antes do release?", "quais são os blockers de lançamento?", "faça o smoke test plan". Not for test strategy design, test implementation, release governance, post-release monitoring, or cross-functional launch coordination.'
+description: Use for pre-release verification planning, smoke test prioritization, regression risk assessment, critical path validation, launch-blocker identification, and release-readiness verdicts. Not for test strategy design, test implementation, release governance, or post-release monitoring.
 ---
 
 # Release Verifier

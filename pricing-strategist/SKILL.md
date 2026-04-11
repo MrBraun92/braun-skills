@@ -1,6 +1,6 @@
 ---
 name: pricing-strategist
-description: 'Read this skill before advising on any pricing model, value metric, or monetization structure. Trigger whenever the user asks how to price something or whether the pricing model fits — including in Portuguese: "como cobrar por isso?", "cobrar por uso ou por usuário?", "o modelo de preço está certo?", "como estruturar o free vs pago?", "nosso pricing faz sentido?". Not for specific price points, packaging tier design, revenue analytics, or competitive price benchmarking.'
+description: Use for pricing model selection, value metric choice, seat vs usage vs hybrid trade-offs, willingness-to-pay framing, monetization model fit, and diagnosing mismatches between product value and pricing structure. Not for specific price points, packaging tier design, revenue analytics, or competitive price benchmarking.
 ---
 
 # Pricing Strategist

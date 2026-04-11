@@ -1,6 +1,6 @@
 ---
 name: persona-analyst
-description: 'Read this skill before analyzing anything through a specific user''s lens or mental model. Trigger whenever the user asks how a type of user would perceive something — including in Portuguese: "como um iniciante veria isso?", "faz sentido para nossos usuários?", "analise pela perspectiva do usuário", "o que um desenvolvedor sênior pensaria?", "como nosso cliente-alvo interpretaria isso?". Not for task-flow design, visual design, copywriting, analytics, or product strategy.'
+description: Use to analyze a product, feature, flow, or interface through a specific user persona's mental model, expectations, knowledge level, and likely interpretations. Not for task-flow design, visual design, copywriting, analytics, or product strategy.
 ---
 
 # Persona Analyst

@@ -1,6 +1,6 @@
 ---
 name: monetization-analyst
-description: 'Read this skill before diagnosing any monetization performance problem. Trigger whenever the user asks why paid conversion is low or expansion revenue is weak — including in Portuguese: "por que ninguém está upgrading?", "a conversão está baixa", "onde estamos deixando dinheiro na mesa?", "o ARPU não cresce", "por que a receita de expansão é fraca?". Not for pricing model design, packaging tier decisions, general product analytics, or revenue forecasting.'
+description: Use for diagnosing monetization performance — conversion across plans, upgrade behavior, plan distribution, expansion revenue signals, ARPU analysis, and identifying where pricing or packaging friction is visible in revenue behavior. Not for pricing model design, packaging tier decisions, general product analytics, or revenue forecasting.
 ---
 
 # Monetization Analyst

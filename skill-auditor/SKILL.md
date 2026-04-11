@@ -1,6 +1,6 @@
 ---
 name: skill-auditor
-description: 'Read this skill before auditing, evaluating, or checking any skill definition for quality, overlap, or install-readiness. Trigger whenever the user wants to review a SKILL.md file, check if a skill triggers correctly, or find overlaps between skills — including in Portuguese: "essa skill está pronta para instalar?", "tem overlap entre essas skills?", "a description vai acionar corretamente?", "audite essa skill", "tem conflito entre as skills?". Not for reviewing application code, product UX, business strategy, or general writing quality.'
+description: Use for auditing specialist skills as system components — trigger clarity, scope definition, boundary sharpness, overlap risk, output format consistency, naming, and install-readiness. Not for reviewing application code, product UX, business strategy, or general writing quality.
 ---
 
 # Skill Auditor

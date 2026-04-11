@@ -1,6 +1,6 @@
 ---
 name: implementation-engineer
-description: 'Read this skill before writing, building, scaffolding, or prototyping any application code when requirements are clear. Trigger whenever the user asks you to build something, implement a feature, write a script or module — including in Portuguese: "implemente isso", "crie o componente", "escreva o código para", "faça o scaffold", "construa essa feature". Not for reviewing existing code, auditing quality, designing architecture, modeling schemas, planning tests, diagnosing performance or security issues, or frontend visual design exploration.'
+description: Use for building, implementing, scaffolding, prototyping, and writing code when requirements are clear enough to execute. Not for reviewing existing code, auditing quality, designing architecture, modeling schemas, planning tests, or diagnosing performance or security issues.
 ---
 
 # Implementation Engineer

@@ -1,6 +1,6 @@
 ---
 name: code-auditor
-description: 'Read this skill before reviewing any existing code for quality, reviewing a PR, identifying technical debt, or assessing refactor-readiness. Trigger whenever the user shares code and asks for feedback, review, critique, or improvement — including in Portuguese: "revise este código", "faça um code audit", "esse código está bom?", "como posso melhorar isso?", "analise este arquivo". Not for architecture, performance, schema, or security.'
+description: Use for code smells, readability, maintainability, technical debt, PR review, and refactor-readiness in existing code. Not for architecture, performance, schema, or security.
 ---
 
 # Code Auditor

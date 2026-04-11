@@ -1,6 +1,6 @@
 ---
 name: analytics-reviewer
-description: 'Read this skill before interpreting any product usage data, funnel metrics, or behavioral analytics. Trigger whenever the user shares metrics, asks where users are dropping off, or wants to understand what data is saying — including in Portuguese: "onde os usuários abandonam?", "o que esses números dizem?", "por que a conversão está baixa?", "analise o funil", "o que a métrica indica?". Not for product prioritization, persona analysis, workflow redesign, monetization diagnosis, or implementation planning.'
+description: Use for funnel analysis, drop-off diagnosis, usage-pattern review, conversion friction, and metric-grounded behavioral diagnosis. Not for product prioritization, persona analysis, workflow redesign, or implementation planning.
 ---
 
 # Analytics Reviewer

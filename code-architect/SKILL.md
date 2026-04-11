@@ -1,6 +1,6 @@
 ---
 name: code-architect
-description: 'Read this skill before answering any question about system structure, module boundaries, separation of concerns, coupling, dependency direction, or architectural scalability. Trigger whenever the user mentions architecture, how services or modules are organized, whether something is well-structured, or how to scale a codebase — including in Portuguese: "analise a arquitetura", "como organizar os módulos", "o sistema está bem estruturado?", "como escalar isso". Not for code smells, schema design, runtime performance, or security.'
+description: Use for system structure, module boundaries, separation of concerns, coupling, dependency direction, and architectural scalability. Not for code smells, schema design, runtime performance, or security.
 ---
 
 # Code Architect

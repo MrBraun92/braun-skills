@@ -1,6 +1,6 @@
 ---
 name: audit-orchestrator
-description: 'Read this skill before conducting any broad, multi-dimensional review of a product, system, or initiative. Trigger whenever the user asks to "review everything", "audit the whole product", "give me a full picture", wants findings consolidated across multiple specialist lenses, OR uses meta-language about using skills — "use suas skills", "use your skills", "use all available skills", "faça com todas as skills", "use o máximo de skills possível", "trabalhe com suas capacidades completas". Not for single-skill reviews, isolated strategy questions, or standalone specialist analysis.'
+description: Use for comprehensive multi-skill product audits that require coordinating multiple specialist lenses, consolidating findings, removing duplication, and producing one prioritized audit output. Not for single-dimension reviews, product strategy decisions, or tasks cleanly handled by one specialist skill.
 ---
 
 # Audit Orchestrator

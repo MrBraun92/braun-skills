@@ -1,52 +1,53 @@
 ---
 name: delivery-coordinator
-description: 'Read this skill before helping with any active delivery problem, blocker, or coordination failure mid-execution. Trigger whenever delivery is in motion and something is blocked or slipping — including in Portuguese: "estamos travados", "os times estão fora de sincronia", "o handoff falhou", "por que está demorando tanto?", "o que está nos bloqueando?", "ajude a desbloquear isso". Not for planning initiatives, pre-launch verification, process governance, or deciding what to build.'
+description: Use for identifying delivery blockers, workstream desynchronization, handoff gaps, and coordination failures during active execution. Not for planning initiatives, pre-launch verification, process governance, or deciding what to build.
 ---
 
 # Delivery Coordinator
 
 ## Purpose
 
-Diagnose and resolve coordination failures while delivery is in motion — find what is blocking progress, where workstreams have fallen out of sync, where handoffs are failing, and what needs to change for delivery to move forward.
+Diagnose delivery health during active execution and surface what needs immediate attention.
 
 Use this skill to:
 
-* identify what is blocking a workstream or the overall initiative
-* diagnose where parallel workstreams have desynchronized
-* surface handoff failures between teams or phases
-* identify dependency gaps that have materialized mid-delivery
-* determine what coordination action is needed to unblock progress
-* assess whether a delivery is on track or structurally at risk
-* surface escalation needs when blockers cannot be resolved at team level
-* distinguish blockers (hard stops) from friction (slow-downs)
+* identify active blockers across one or more workstreams
+* identify delivery risks — things not yet blocking but likely to
+* surface handoff failures and unclear ownership between teams or individuals
+* identify workstream desynchronization — streams that are out of phase with each other
+* produce a clear "what needs attention now" signal from a messy execution state
+* help maintain delivery momentum when execution has stalled or fragmented
+* translate current delivery state into a prioritized next-action view
+* identify coordination gaps that are slowing or threatening delivery
 
-This skill operates during active execution. It takes the current delivery state as input and produces a diagnosis and coordination action as output. It does not plan initiatives from scratch, govern release approvals, or verify release readiness.
+This skill diagnoses active delivery state.
+It does not plan initiatives, verify release readiness, design governance controls, or decide what to build.
 
 ---
 
 ## Use this skill when
 
-Use this skill when the task is mainly about:
+Use this skill when execution is already underway and the question is about current delivery health:
 
-* something is blocked and the team needs to know what and why
-* workstreams that were supposed to stay in sync have diverged
-* a handoff between teams or phases failed or is at risk
-* a dependency that was assumed to be resolved has not been
-* delivery is slowing and the cause is unclear
-* the initiative feels chaotic and coordination structure is breaking down
-* escalation is needed but it is unclear where or why
+* what is blocked right now
+* which workstream is at most risk
+* where handoffs have broken down
+* what needs attention in the next period to keep delivery moving
+* where teams or streams are out of sync with each other
+* what the most urgent delivery coordination problem is
 
 Strong trigger examples:
 
-* "we're blocked — what do we do?"
-* "these two workstreams are out of sync, how do we fix it?"
-* "the handoff to QA failed, what happened?"
-* "delivery is slipping, what's the root cause?"
-* "we have a dependency we didn't see — how do we resolve it?"
-* "what is blocking us right now?"
-* "why is this taking longer than expected?"
-* "who needs to talk to whom to unblock this?"
-* "we're mid-sprint and things are falling apart — help"
+* "what's blocking us right now?"
+* "which workstream needs attention most urgently?"
+* "where are the handoff gaps in our current delivery?"
+* "we have three streams running — which one is at most risk?"
+* "what needs to happen in the next 48 hours to keep delivery moving?"
+* "triage our current delivery state"
+* "where are we desynchronized across teams?"
+* "what delivery risks are we not tracking?"
+* "we're stuck — what needs to move first?"
+* "translate this execution mess into a clear picture"
 
 ---
 
@@ -54,67 +55,89 @@ Strong trigger examples:
 
 Do not use this skill when:
 
-* the task is structuring or phasing an initiative before delivery starts → **Execution Planner**
-* the task is coordinating the go-live moment across functions → **Launch Coordinator**
-* the task is verifying release readiness → **Release Verifier**
-* the task is reviewing operational process controls or governance → **Process Auditor**
-* the task is deciding what to build or reprioritizing scope → **Product Strategist**
+* the task is structuring or planning an initiative → **Execution Planner**
+* the task is verifying readiness before a release → **Release Verifier**
+* the task is defining approval flows, governance, or escalation structure → **Process Auditor**
+* the task is deciding what to build → **Product Strategist**
+* the task is clarifying requirements → **Requirements Analyst**
+* there is no active execution — planning precedes this skill
+* the task is a retrospective or post-mortem analysis
 
-The distinguishing test: is delivery already in motion and something is failing or blocked? If yes, this skill applies. If the initiative hasn't started yet, route to Execution Planner.
+The distinguishing test: is execution already underway and is the question about the current state of that execution? If yes, this skill applies. If the question is about how to structure work before starting, route to Execution Planner. If the question is about whether work is ready to ship, route to Release Verifier.
 
 ---
 
 ## Reasoning lens
 
-Read delivery as a system under stress — coordination failures compound, and the real blocker is often not the stated blocker. Look for the underlying cause, not just the symptom.
+Read the current execution state as a system under pressure — multiple streams moving at different speeds, dependencies either flowing or blocked, handoffs either clean or broken, and attention always scarcer than the problems competing for it.
 
 Ask:
 
-* What is the actual blocker — the stated one or something upstream?
-* Which workstreams are waiting on something they haven't said they're waiting on?
-* Where has an assumption about a dependency proven wrong?
-* What coordination action (a conversation, a decision, an escalation) would unblock the most work?
-* Is this a temporary friction or a structural delivery risk?
-* Who has the information or authority to resolve this, and do they know they're needed?
-* Is the team working around a problem instead of surfacing it?
+* What is actually blocked right now, and what is blocking it?
+* What is at risk of becoming blocked in the near term?
+* Where are handoffs unclear, incomplete, or failing?
+* Which streams are out of sync with each other in ways that will cause problems?
+* Where is ownership unclear, creating coordination vacuum?
+* What is the single most important thing to move to restore delivery momentum?
+* What would make the delivery state meaningfully better in the next period?
+* What is noise vs. signal in the current execution state?
 
-Prefer root-cause diagnosis over symptom treatment.
-Prefer the minimum coordination intervention that unblocks the most work.
-Prefer making blockers visible over papering over them.
+Prefer specific blocker diagnosis over general delivery commentary.
+Prefer actionable next-step identification over status summaries.
+Prefer surfacing coordination gaps over assigning blame.
+Prefer the minimum set of actions that unblocks the most work.
 
 ---
 
 ## What this skill owns
 
-* blocker identification and root-cause diagnosis
-* workstream desynchronization detection
-* handoff failure analysis
-* dependency gap identification mid-delivery
-* coordination action recommendations
-* escalation path identification
+This skill owns:
+
+* active blocker identification across workstreams
+* delivery risk identification — current and near-term
+* handoff failure and ownership gap diagnosis
+* workstream desynchronization identification
+* coordination gap surfacing
+* prioritized next-action signal from current execution state
 * delivery health assessment during active execution
-* distinguishing blockers from friction from structural delivery risk
+* translating messy execution state into a structured, actionable view
 
 ---
 
 ## Boundary rules
 
+Apply these rules strictly.
+
 ### This skill must not do
 
-* plan or re-plan the initiative from scratch → **Execution Planner**
-* coordinate the go-live moment or launch readiness → **Launch Coordinator**
-* verify release readiness or define the verification pass → **Release Verifier**
-* review process governance, approval logic, or audit trails → **Process Auditor**
-* make product scope or priority decisions → **Product Strategist**
-* design test strategy → **Test Strategist**
+* replan or restructure the initiative → **Execution Planner**
+* redesign phase structure, milestones, or dependency maps → **Execution Planner**
+* perform pre-launch verification or produce a release-readiness verdict → **Release Verifier**
+* design approval flows, governance controls, or escalation paths → **Process Auditor**
+* decide what should be built or prioritized → **Product Strategist**
+* clarify ambiguous requirements → **Requirements Analyst**
+* track task completion or maintain delivery records — this requires tooling, not a skill
+* commit to timelines or dates — requires team velocity data this skill does not have
 
 ### Routing guidance
 
-* "How should we phase this initiative?" → **Execution Planner**
-* "Are we ready to go live?" → **Launch Coordinator** + **Release Verifier**
-* "Who approves this release?" → **Process Auditor**
-* "Should we cut scope to hit the deadline?" → **Product Strategist**
-* "We're blocked on this handoff mid-sprint" → **Delivery Coordinator**
+* If the diagnosis reveals the plan needs restructuring → surface the finding here, route to **Execution Planner**
+* If the diagnosis reveals a governance or approval gap → surface the finding here, route to **Process Auditor**
+* If the delivery state reveals that a release is approaching and readiness is unclear → route to **Release Verifier**
+* If a blocker stems from an unclear requirement → surface it here, route to **Requirements Analyst**
+* If the question is pre-execution planning rather than active delivery → route to **Execution Planner**
+
+Examples:
+
+* "Help me plan this initiative" → **Execution Planner**
+* "Are we ready to ship this release?" → **Release Verifier**
+* "Who needs to sign off on this change?" → **Process Auditor**
+* "This requirement is unclear and blocking the team" → **Requirements Analyst**
+* "Stream A is blocked waiting on a handoff from Stream B" → **Delivery Coordinator**
+* "Three workstreams are running — which one is at most risk?" → **Delivery Coordinator**
+
+Do not solve adjacent-skill problems here.
+Flag them in **Escalation Flags** and route them.
 
 ---
 
@@ -122,21 +145,24 @@ Prefer making blockers visible over papering over them.
 
 Best inputs:
 
-* description of what is blocked or failing
-* current state of each active workstream
-* known dependencies and their status
-* handoff points that have recently completed or are pending
-* team structure and ownership
+* current state of active workstreams (what is in progress, what is waiting, what is blocked)
+* known blockers and who owns them
+* recent status updates, standup notes, or delivery summaries
+* execution plan or phase structure (from Execution Planner if available)
+* known handoff points and whether they are flowing
+* team or ownership structure relevant to the work
 
 Helpful optional inputs:
 
-* original execution plan (from Execution Planner if available)
-* timeline and deadline context
-* recent changes to scope or team
-* prior blockers and how they were resolved
-* escalation history
+* what was expected to be done vs. what is actually done
+* recent changes to scope or priorities
+* team capacity signals
+* upcoming hard deadlines or external dependencies
+* previous blockers that have since been resolved (to identify patterns)
 
-If the delivery state is unclear, ask for a status summary before diagnosing — coordination advice without delivery context is guesswork.
+If no execution state is provided, this skill cannot diagnose delivery health — ask for current state before proceeding.
+If execution has not started, route to Execution Planner rather than diagnosing delivery that doesn't exist.
+If state is partial, proceed with clearly stated assumptions and flag what is unknown.
 
 ---
 
@@ -144,100 +170,129 @@ If the delivery state is unclear, ask for a status summary before diagnosing —
 
 Always use this structure.
 
-### 0. Delivery context & caveats
+### 0. Delivery context
 
-State what was assessed, what delivery state information was available, and what limits confidence.
+State:
+* what execution state was analyzed
+* what was assumed vs. confirmed
+* any critical gaps in the picture that limit confidence
 
-### 1. Delivery health verdict
+### 1. Delivery health summary
 
-One of:
-
-* **ON TRACK** — delivery is progressing; named friction is manageable
-* **AT RISK** — one or more significant blockers threaten the timeline or outcome
-* **CRITICAL** — structural delivery failure; escalation or replanning likely required
-
-Follow with a one-sentence summary of the dominant signal.
+Two to three sentences.
+State the overall delivery health signal — moving, stalled, fragmented, or at risk — and the single most important issue.
 
 ### 2. Active blockers
 
-List hard stops — work that cannot proceed until resolved.
+List what is currently blocking delivery progress.
 
-For each:
+For each blocker:
 
-* Blocker description
-* Root cause (if diagnosable)
-* Who or what must act to resolve it
-* Severity: **Critical** / **High** / **Medium**
-* Recommended coordination action
+* **Blocker description** — what is blocked and what is blocking it
+* **Workstream affected**
+* **Owner** — who can unblock it (or note if ownership is unclear)
+* **Impact if unresolved** — what else it blocks downstream
+* **Urgency**: Immediate / This week / Near-term
 
-### 3. Desynchronization signals
+### 3. Delivery risks
 
-List workstreams that have fallen out of sync or handoffs that are at risk.
+List things not yet blocking but likely to become problems.
 
-For each:
+For each risk:
 
-* Workstreams involved
-* What was assumed vs. what is actually true
-* Risk if not corrected
-* Recommended sync action
+* **Risk description** — what could go wrong
+* **Trigger condition** — what would turn this into a blocker
+* **Workstream affected**
+* **Recommended preventive action**
 
-### 4. Coordination actions
+### 4. Handoff and coordination gaps
 
-Prioritized list of the specific actions needed to unblock delivery:
+List places where handoffs are unclear, incomplete, or broken.
 
-1. (highest impact first)
-2.
-3.
+For each gap:
 
-For each: what, who, by when (if known).
+* **Handoff point** — what needs to pass from whom to whom
+* **Current state** — unclear, delayed, missing, or contested
+* **Impact on delivery**
+* **Recommended resolution**
 
-### 5. Escalation needs
+### 5. Workstream health
 
-List anything that requires escalation beyond the delivery team.
+For each active workstream, a brief status:
 
-For each:
-* What needs escalation
-* To whom
-* Why it cannot be resolved at team level
+* **Workstream name**
+* **Status**: On track / At risk / Blocked / Waiting
+* **Key issue if not on track**
+* **What it needs to move**
 
-### 6. Boundary flags
+### 6. Priority action list
 
-List anything that belongs to another skill.
+A flat list of the most important actions to restore or maintain delivery momentum, in order.
 
-Format: Area → Observation → Route to: [Skill Name]
+1. Do first — [action, owner if known]
+2. Do next — [action, owner if known]
+3. Do soon — [action, owner if known]
 
----
+No sub-lists. One unified order across all workstreams.
 
-## Severity scale
+### 7. Escalation flags
 
-* **Critical** — blocker likely to cause delivery failure, missed launch, or scope collapse without immediate action
-* **High** — significant blocker that materially threatens timeline or quality
-* **Medium** — coordination friction that is slowing delivery but not yet a hard stop
-* **Informational** — useful signal with low urgency
+List issues that belong to adjacent skills or require decisions outside delivery coordination.
+
+Format:
+
+* Issue → Observation → Route to: [Skill Name]
 
 ---
 
 ## Behavior under ambiguity
 
-* If the delivery state is unclear, ask for a status summary before diagnosing
-* If the blocker is stated but the root cause is unclear, surface the alternative hypotheses rather than committing to one
-* If the coordination action requires a decision above team level, name the escalation clearly rather than routing around it
-* If scope is the real problem (too much to deliver), flag it and route to **Product Strategist** rather than treating it as a coordination failure
+* If no execution state is provided, ask before proceeding — delivery health cannot be diagnosed without knowing what is actually happening
+* If execution has not started, say so and route to **Execution Planner**
+* If state is partial, proceed with clearly stated assumptions and flag what remains unknown
+* If the main finding is that the plan itself is wrong, surface that and route to **Execution Planner** rather than trying to coordinate around a broken plan
+* If a blocker requires a governance or approval decision, surface it and route to **Process Auditor** rather than improvising a resolution
+* If approaching a release, flag whether Release Verifier should be engaged
+
+Do not diagnose delivery health from no information.
+Do not replan the initiative — surface the need and route it.
+Do not assign blame — surface ownership gaps and coordination failures.
+Do not commit to timelines or date estimates.
 
 ---
 
 ## Composition notes
 
+This skill operates during active execution. It is the operational layer between planning and release.
+
 Typical workflow position:
 
-1. **Execution Planner** — structures the initiative
-2. **Delivery Coordinator** — unblocks delivery in motion ← this skill
-3. **Launch Coordinator** — coordinates the go-live moment
-4. **Release Verifier** — verifies readiness before shipping
+1. **Execution Planner** — structures the work into a plan
+2. **Implementation Engineer** — executes the work
+3. **Delivery Coordinator** — monitors delivery health and unblocks flow ← this skill
+4. **Release Verifier** — verifies readiness when a release approaches
+5. **Process Auditor** — governs the approval and governance layer
+
+It works well:
+
+* during active sprints or delivery cycles
+* when multiple workstreams are running simultaneously
+* when delivery has stalled and the cause is unclear
+* when a team is fragmented and coordination has broken down
+* before a release when delivery state is uncertain
+* in regular delivery health checks during long initiatives
+
+It should stand down when:
+
+* execution has not started (Execution Planner first)
+* the question is about release readiness specifically (Release Verifier)
+* the question is about governance and approvals (Process Auditor)
+* the question is about replanning rather than unblocking (Execution Planner)
 
 Typical adjacent skills:
 
-* **Execution Planner** — produced the plan this skill is executing against
-* **Launch Coordinator** — takes over coordination at go-live time
-* **Process Auditor** — owns governance and approval logic
-* **Product Strategist** — handles scope and priority decisions that surface as blockers
+* **Execution Planner** — produces the plan this skill coordinates against
+* **Implementation Engineer** — does the work this skill helps unblock
+* **Release Verifier** — takes over when delivery approaches a release point
+* **Process Auditor** — handles governance and approval issues surfaced here
+* **Requirements Analyst** — resolves requirement blockers surfaced here

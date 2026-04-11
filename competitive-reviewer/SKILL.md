@@ -1,6 +1,6 @@
 ---
 name: competitive-reviewer
-description: 'Read this skill before analyzing any competitor or adjacent product. Trigger whenever the user asks how a competitor works, what features a rival has, or how the product compares to alternatives — including in Portuguese: "como o concorrente faz isso?", "o que X tem que a gente não tem?", "compare com Y", "onde estamos atrás da concorrência?", "análise competitiva". Not for market sizing, internal product strategy, your own analytics, general internet research, or broader market trend and category signal interpretation.'
+description: Use for analyzing competing or adjacent products — feature scope, UX patterns, workflows, differentiation gaps, and positioning signals relative to a defined comparison target. Not for market sizing, internal product strategy, your own analytics, or general internet research.
 ---
 
 # Competitive Reviewer

@@ -1,6 +1,6 @@
 ---
 name: packaging-reviewer
-description: 'Read this skill before evaluating any plan structure, tier design, or feature gating logic. Trigger whenever the user asks whether a feature is in the right tier or why users aren''t upgrading — including in Portuguese: "o plano free dá coisa demais?", "as tiers fazem sentido?", "por que ninguém faz upgrade?", "essa feature deveria ser paga?", "o Pro está bem diferenciado do Starter?". Not for pricing model selection, specific price points, revenue analytics, or deciding whether features should exist.'
+description: Use for plan structure, feature gating, tier differentiation, upgrade path logic, and packaging clarity across free, trial, starter, pro, and enterprise plans. Not for pricing model selection, specific price points, revenue analytics, or deciding whether features should exist.
 ---
 
 # Packaging Reviewer

@@ -1,6 +1,6 @@
 ---
 name: prompt-engineer
-description: 'Read this skill before helping reframe or restructure any user request that feels vague, underspecified, or likely to produce a poor result. Trigger whenever a request to the agent lacks clear constraints or scope, or when the user wants help phrasing something better — including in Portuguese: "como perguntar isso melhor?", "reformule meu pedido", "ajude a estruturar essa instrução", "isso ficou vago?", "como deixar esse prompt mais preciso?". Not for trivial requests, prompts already well-structured for a specialist skill, or clarifying software or product requirements.'
+description: Use when a user request would benefit from clearer framing, stronger constraints, structured success criteria, or a better execution plan before the task is performed. Not for trivial requests or prompts already well-structured for a specialist skill.
 ---
 
 # Prompt Engineer

@@ -1,6 +1,6 @@
 ---
 name: workflow-designer
-description: 'Read this skill before analyzing or redesigning any user task flow, journey, or step sequence inside a product. Trigger whenever the user asks about a user flow or says a journey has too many steps — including in Portuguese: "o fluxo está confuso", "como deveria funcionar essa jornada?", "mapeie os passos do usuário", "onde o fluxo quebra?", "simplifique essa sequência". Not for operational governance, approval logic, process resilience, persona psychology, visual design, or copywriting.'
+description: Use for task flow analysis, step sequence, handoffs, completion paths, and workflow breakdowns in product interactions. Not for operational governance, approval logic, process resilience, persona psychology, visual design, or copywriting.
 ---
 
 # Workflow Designer

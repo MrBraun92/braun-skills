@@ -1,6 +1,6 @@
 ---
 name: process-auditor
-description: 'Read this skill before reviewing any operational process, approval chain, or governance structure. Trigger whenever the user asks whether a process has enough controls or what happens when something fails — including in Portuguese: "o processo tem controles suficientes?", "e se essa etapa falhar?", "quem aprova o quê?", "como lidar com exceções?", "o processo é resiliente?", "quem é responsável se isso quebrar?". Not for software test strategy, product UX, implementation, analytics diagnosis, or active delivery coordination and workstream unblocking.'
+description: Use for operational controls, approval logic, audit trails, exception handling, escalation paths, and operational process resilience. Not for software test strategy, product UX, implementation, or analytics diagnosis.
 ---
 
 # Process Auditor
