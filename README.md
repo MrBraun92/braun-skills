@@ -2,7 +2,7 @@
 
 **Owner:** Oliver ([@MrBraun92](https://github.com/MrBraun92))
 **Última auditoria:** abril 2026
-**Skills ativas:** 120 · **Arquivadas:** 88 (em [`archive/`](./archive))
+**Skills ativas:** 199 · **Arquivadas:** 9 (em [`archive/`](./archive))
 
 Este repositório contém o stack pessoal de **Agent Skills** do Oliver — capacidades modulares carregadas no Manus, no Claude Code e no GPT. Cada skill vive em sua própria pasta com um `SKILL.md` no formato canônico (frontmatter YAML + corpo Markdown).
 
@@ -10,15 +10,17 @@ Este repositório contém o stack pessoal de **Agent Skills** do Oliver — capa
 
 ## Sobre esta auditoria
 
-Em abril de 2026 o repo passou por uma revisão completa em duas fases:
+Em abril de 2026 o repo passou por uma revisão de 3 etapas:
 
-1. **Phase 0 — Arquivamento** (commit [`e1615f8`](https://github.com/MrBraun92/manus-skills/commit/e1615f8)): 88 skills movidas para `archive/` por estarem fora do perfil real do owner (job-search, RenderCV, jurídico enterprise, contabilidade SOX, devops enterprise) ou por serem duplicatas literais. Rationale completo em [`archive/README.md`](./archive/README.md).
+1. **Phase 0 — Arquivamento amplo** (commit [`e1615f8`](https://github.com/MrBraun92/manus-skills/commit/e1615f8), 88 skills): proposta inicial baseada em perfil inferido. **Revertida** após o owner confirmar que usa o conteúdo do dia-a-dia.
 
-2. **Phases 1-4 — Skills v2**: 40 skills novas adicionadas, distribuídas em 4 fases temáticas alinhadas ao perfil real:
+2. **Phases 1-4 — Skills v2** (commit [`2e29711`](https://github.com/MrBraun92/manus-skills/commit/2e29711), 40 skills novas): adicionadas em 4 fases temáticas alinhadas ao perfil real:
    - **Fase 1 — Tese acadêmica** (12 skills, em inglês): tese 100% em inglês, padrão APA 7, na UiS/Noruega, ética via SIKT, tema em gestão / AI advisory / dynamic capabilities / service quality
    - **Fase 2 — EventPro / dev** (9 skills, em inglês técnico): SaaS BR em React 19 + tRPC + Drizzle/MySQL (TiDB) + AWS S3 + OpenAI
    - **Fase 3 — Produtividade** (7 skills, em PT-BR): solopreneur AI com workflow paralelo Claude/Manus/GPT
    - **Fase 4 — Trading com método** (12 skills, em PT-BR com disclaimer obrigatório): trader retail BR sofisticado
+
+3. **Reverso cirúrgico** — escopo do `archive/` reduzido para **9 skills** (5 fusões duplicatas + 4 substituições estratégicas pelas v2). Tudo o que estava genuinamente em uso foi restaurado para a raiz. Detalhes em [`archive/README.md`](./archive/README.md).
 
 ---
 
@@ -95,59 +97,23 @@ Em abril de 2026 o repo passou por uma revisão completa em duas fases:
 
 ---
 
-## Skills core preservadas (80 skills)
+## Demais skills do repo (159 skills mantidas)
 
-Skills marcadas com 🔁 duplicam plugin nativo do Claude Code (preservadas no repo a pedido do owner para autoria histórica).
+O repo preserva 159 skills além das 40 v2 acima. A grande maioria foi mantida porque o owner usa o conteúdo eventualmente — não cabe arquivar pelo critério "fora do perfil inferido". Skills marcadas com 🔁 duplicam plugin nativo do Claude Code (preservadas para autoria histórica e versão controlada).
 
-### 💼 Trading — stack pessoal BR (7 skills)
+Para a lista completa navegue pelos diretórios na raiz do repo. Categorias principais (com tamanho aproximado):
 
-| Skill | Descrição |
-|---|---|
-| [bbb-strategist](./bbb-strategist/SKILL.md) | Estrategista de Big Brother Brasil |
-| [equity-fundamental-analyst](./equity-fundamental-analyst/SKILL.md) | Análise fundamentalista de ações |
-| [order-flow-microstructure](./order-flow-microstructure/SKILL.md) | Fluxo, VWAP, microestrutura |
-| [pine-script-quant](./pine-script-quant/SKILL.md) | Pine Script para TradingView — quant strategies |
-| [risk-regime-portfolio](./risk-regime-portfolio/SKILL.md) | Risco e regime de mercado |
-| [technical-price-action](./technical-price-action/SKILL.md) | Análise técnica e price action |
-| [trading-thesis-orchestrator](./trading-thesis-orchestrator/SKILL.md) | Orquestra teses de trading |
-
-### 🎓 Acadêmico — base preservada (3 skills)
-
-| Skill | Descrição |
-|---|---|
-| 🔁 [thesis-supervisor](./thesis-supervisor/SKILL.md) | Supervisão de tese (orientação geral) |
-| 🔁 [evidence-researcher](./evidence-researcher/SKILL.md) | Busca peer-reviewed e síntese geral |
-| 🔁 [interview-intelligence-analyst](./interview-intelligence-analyst/SKILL.md) | Análise de transcrições |
-
-### 🛠️ EventPro / dev (~28 skills)
-
-Code & arquitetura: 🔁 `code-architect`, 🔁 `code-auditor`, 🔁 `data-modeler`, `system-design`, `architecture`, `code-review`, `tech-debt`, 🔁 `documentation`, 🔁 `debug`, `domain-language-cartographer`
-
-Implementação: 🔁 `implementation-engineer`, 🔁 `requirements-analyst`, `prd-issue-writer`, `vertical-slice-planner`, `refactor-plan-writer`, `tdd-implementation-runner`, `bug-triage-tdd-planner`
-
-Qualidade & segurança: 🔁 `test-strategist`, 🔁 `qa-executor`, 🔁 `release-verifier`, 🔁 `production-reviewer`, 🔁 `performance-reviewer`, 🔁 `security-reviewer`, 🔁 `accessibility-auditor`, `coding-agent-safety-guardrails`, `repo-quality-setup`, `deploy-checklist`
-
-Design: 🔁 `interface-designer`, 🔁 `ux-writer`, `ux-copy`
-
-### 📊 Produto / negócio / marketing (14 skills)
-
-🔁 `persona-analyst`, 🔁 `product-strategist`, `product-brainstorming`, 🔁 `pricing-strategist`, 🔁 `packaging-reviewer`, 🔁 `monetization-analyst`, 🔁 `retention-lifecycle-strategist`, 🔁 `customer-signal-synthesizer`, 🔁 `analytics-reviewer`, 🔁 `competitive-reviewer`, 🔁 `market-analyst`, 🔁 `positioning-strategist`, `content-creation`, `draft-content`
-
-### ⚙️ Ops / processo (6 skills)
-
-🔁 `audit-orchestrator`, 🔁 `delivery-coordinator`, 🔁 `execution-planner`, 🔁 `launch-coordinator`, 🔁 `process-auditor`, 🔁 `workflow-designer`
-
-### 📊 Data / analytics (8 skills)
-
-`analyze`, `build-dashboard`, `explore-data`, `validate-data`, `data-context-extractor`, `statistical-analysis`, `create-viz`, `write-query`
-
-### 🔧 Meta-skills (6 skills)
-
-🔁 `skill-router`, 🔁 `skill-creator`, 🔁 `skill-auditor`, `skill-installer`, `internet-skill-finder`, 🔁 `memory-management`
-
-### 🛟 Outros úteis (4 skills)
-
-`canva-mcp`, `similarweb-analytics`, 🔁 `prompt-engineer`, 🔁 `grammar-auditor`
+- **💼 Trading — stack pessoal BR (7):** `bbb-strategist`, `equity-fundamental-analyst`, `order-flow-microstructure`, `pine-script-quant`, `risk-regime-portfolio`, `technical-price-action`, `trading-thesis-orchestrator`
+- **🎓 Acadêmico (3):** 🔁 `thesis-supervisor`, 🔁 `evidence-researcher`, 🔁 `interview-intelligence-analyst`
+- **🛠️ Dev / arquitetura / qualidade (~30):** `code-architect`, `code-auditor`, `data-modeler`, `system-design`, `architecture`, `tech-debt`, `documentation`, `debug`, `domain-language-cartographer`, `implementation-engineer`, `requirements-analyst`, `prd-issue-writer`, `vertical-slice-planner`, `refactor-plan-writer`, `tdd-implementation-runner`, `bug-triage-tdd-planner`, `test-strategist`, `qa-executor`, `release-verifier`, `production-reviewer`, `performance-reviewer`, `security-reviewer`, `accessibility-auditor`, `coding-agent-safety-guardrails`, `repo-quality-setup`, `deploy-checklist`, `interface-designer`, `ux-writer`, `ux-copy`, `design-critique`, `design-handoff`, `design-system`
+- **📊 Produto / negócio / marketing (~20):** `persona-analyst`, `product-strategist`, `product-brainstorming`, `pricing-strategist`, `packaging-reviewer`, `monetization-analyst`, `retention-lifecycle-strategist`, `customer-signal-synthesizer`, `analytics-reviewer`, `competitive-reviewer`, `competitive-brief`, `market-analyst`, `positioning-strategist`, `content-creation`, `draft-content`, `blog-writer`, `seo-audit`, `email-sequence`, `campaign-plan`, `performance-report`, `brand-review`
+- **⚙️ Ops / processo / project (~15):** `audit-orchestrator`, `audit`, `delivery-coordinator`, `execution-planner`, `launch-coordinator`, `process-auditor`, `process-doc`, `process-optimization`, `workflow-designer`, `capacity-plan`, `change-request`, `risk-assessment`, `sprint-planning`, `roadmap-update`, `metrics-review`, `standup`, `task-management`, `status-report`, `stakeholder-update`, `meeting-briefing`, `compliance-tracking`, `compliance-check`
+- **🛠️ Job-search / RenderCV / negócio especializado (~25):** clusters preservados a pedido do owner — usar quando o caso de uso aparecer
+- **🧾 Jurídico / contábil (~15):** `triage-nda`, `review-contract`, `legal-response`, `legal-risk-assessment`, `signature-request`, `vendor-check`, `vendor-review`, `audit-support`, `sox-testing`, `journal-entry`, `journal-entry-prep`, `reconciliation`, `variance-analysis`, `financial-statements`, `close-management`, `brief`
+- **🔧 DevOps / SRE / RevOps (~5):** `devops-sre-agent`, `secops-agent`, `incident-response`, `runbook`, `revops-agent`
+- **📊 Data / analytics (8):** `analyze`, `build-dashboard`, `explore-data`, `validate-data`, `data-context-extractor`, `statistical-analysis`, `create-viz`, `write-query`
+- **🔧 Meta-skills (6):** `skill-router`, `skill-creator`, `skill-auditor`, `skill-installer`, `internet-skill-finder`, `memory-management`
+- **🛟 Utilitários e outros (~15):** `canva-mcp`, `similarweb-analytics`, `prompt-engineer`, `grammar-auditor`, `pdf-tools`, `excel-generator`, `gws-best-practices`, `flight-fare-hacker`, `travel-advisor`, `weather-api`, `video-generator`, `bgm-prompter`, `tiktok-specialist`, `start`, `update`, `init`, `github-gem-seeker`, `deep-module-architect`, `module-interface-designer`, `scoping-interview`
 
 ---
 
@@ -158,10 +124,11 @@ manus-skills/
 ├── README.md                       ← este arquivo
 ├── IMPORTACAO_SKILLS_RESUMO.md     ← changelog estruturado
 ├── TRADING_STACK_OVERVIEW.md       ← visão do stack de trading
-├── archive/                        ← 88 skills arquivadas (Phase 0)
-│   ├── README.md                   ← rationale completo do arquivamento
+├── MEMO_TO_MANUS.md                ← orientação para o Manus sincronizar
+├── archive/                        ← 9 skills arquivadas (escopo cirúrgico)
+│   ├── README.md                   ← rationale do arquivamento
 │   └── <skill-name>/
-└── <skill-name>/                   ← 120 skills ativas
+└── <skill-name>/                   ← 199 skills ativas
     └── SKILL.md
 ```
 
@@ -169,7 +136,7 @@ manus-skills/
 
 ## Histórico de auditoria
 
-- **abril 2026** — Auditoria completa (Phase 0 + Phases 1-4): 168 → 120 ativas; 40 skills v2 adicionadas; 88 arquivadas
-- **Antes** — repo cresceu organicamente com adições do Manus, Claude e GPT misturando skills nativas + customizadas + experimentais
+- **abril 2026** — Auditoria em 3 etapas: Phase 0 amplo (88 arquivadas) → revertido após confirmação do owner → escopo cirúrgico final (9 arquivadas: 5 fusões + 4 substituições estratégicas) + 40 skills v2 adicionadas. Resultado: **199 ativas + 9 arquivadas**.
+- **Antes** — repo cresceu organicamente com adições do Manus, Claude e GPT misturando skills nativas + customizadas + experimentais.
 
 Para detalhes ver [`IMPORTACAO_SKILLS_RESUMO.md`](./IMPORTACAO_SKILLS_RESUMO.md) e [`archive/README.md`](./archive/README.md).
