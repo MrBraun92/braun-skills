@@ -5,7 +5,7 @@
 
 Este repositório contém o portfólio profissional de **Agent Skills** do Oliver — capacidades modulares carregadas no Manus, no Claude Code e no GPT. Cada skill vive em sua própria pasta com um `SKILL.md` no formato canônico (frontmatter YAML + corpo Markdown).
 
-> **Nota:** As skills de uso estritamente pessoal (perfumaria, hobbies, entretenimento e rotina individual) foram migradas para um repositório privado (`skills-pessoais`).
+(🇺🇸 English below)
 
 ---
 
