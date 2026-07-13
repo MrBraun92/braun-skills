@@ -7,7 +7,7 @@ Pack integrado de Agent Skills para posicionamento profissional, otimização de
 1. `linkedin-strategist-orchestrator` — define foco, coordena diagnóstico e direciona o agente para o workflow correto.
 2. `linkedin-profile-optimizer` — otimiza posicionamento, foto, capa, headline, Sobre, experiências, competências, SEO, discoverability e configurações do perfil.
 3. `linkedin-ssi-network-strategist` — diagnostica os quatro pilares do SSI e transforma pontuação em plano de marca, rede, interação e relacionamento.
-4. `linkedin-content-engine` — planeja, escreve, humaniza, audita, reaproveita e mede conteúdo profissional.
+4. `linkedin-content-strategist` — planeja, escreve, humaniza, audita, reaproveita e mede conteúdo profissional.
 5. `linkedin-mcp-operator` — usa ferramentas MCP para pesquisar pessoas, empresas, vagas, posts, conversas e oportunidades, com confirmação humana para ações externas.
 
 ## Princípios do pack
@@ -27,7 +27,7 @@ Pack integrado de Agent Skills para posicionamento profissional, otimização de
 linkedin-strategist-orchestrator
 ├── linkedin-profile-optimizer
 ├── linkedin-ssi-network-strategist
-├── linkedin-content-engine
+├── linkedin-content-strategist
 └── linkedin-mcp-operator
 ```
 
