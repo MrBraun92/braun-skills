@@ -22,15 +22,13 @@ Este diretório reúne as **Agent Skills** especializadas em estratégia de carr
 | [job-coach](./job-coach/SKILL.md) | Load Max, the veteran recruiter persona for resume advice, interview prep, and adversarial feedback. |
 | [job-scan](./job-scan/SKILL.md) | Search for jobs at a company or parse a specific job posting. |
 | [job-scout](./job-scout/SKILL.md) | Market intelligence for job discovery and company evaluation. |
-| [linkedin-pack](./linkedin-pack/) | Pack integrado com 5 skills para estratégia, perfil, SEO/discoverability, SSI/networking, conteúdo e operações MCP no LinkedIn. |
-| [linkedin-algorithm-expert](./linkedin-algorithm-expert/SKILL.md) | Skill anterior de referência sobre algoritmo e otimização de perfil. |
-| [linkedin-review](./linkedin-review/SKILL.md) | Workflow anterior de revisão de perfil integrado ao Resume Corpus. |
+| [linkedin-pack](./linkedin-pack/) | Pack ativo com 5 skills integradas para estratégia, perfil, SEO/discoverability, SSI/networking, conteúdo e operações MCP no LinkedIn. |
 | [resume-tailoring](./resume-tailoring/SKILL.md) | Creates tailored resumes for specific applications. |
 | [scoping-interview](./scoping-interview/SKILL.md) | Captures job search preferences and constraints. |
 
 ### Como usar
 
-Cada skill vive em sua própria pasta com um arquivo `SKILL.md` no formato canônico. Para ativar uma skill no Manus ou no Claude, compartilhe a URL raw do `SKILL.md` correspondente.
+Cada skill vive em sua própria pasta com um arquivo `SKILL.md` no formato canônico. Para demandas de LinkedIn, use o `linkedin-strategist-orchestrator` como ponto de entrada e carregue apenas as skills do `linkedin-pack`. Skills antigas de LinkedIn foram movidas para `archive/linkedin-legacy/` e não devem ser carregadas em agentes ativos.
 
 ---
 
@@ -54,12 +52,10 @@ This directory contains **Agent Skills** specialized in career strategy, resume 
 | [job-coach](./job-coach/SKILL.md) | Recruiter-style resume and interview guidance. |
 | [job-scan](./job-scan/SKILL.md) | Search companies or parse job postings. |
 | [job-scout](./job-scout/SKILL.md) | Job-market intelligence and opportunity discovery. |
-| [linkedin-pack](./linkedin-pack/) | Integrated 5-skill pack for LinkedIn strategy, profile optimization, SEO/discoverability, SSI/networking, content, and MCP operations. |
-| [linkedin-algorithm-expert](./linkedin-algorithm-expert/SKILL.md) | Previous reference skill for LinkedIn algorithm and profile optimization. |
-| [linkedin-review](./linkedin-review/SKILL.md) | Previous Resume Corpus-integrated LinkedIn review workflow. |
+| [linkedin-pack](./linkedin-pack/) | Active integrated 5-skill pack for LinkedIn strategy, profile optimization, SEO/discoverability, SSI/networking, content, and MCP operations. |
 | [resume-tailoring](./resume-tailoring/SKILL.md) | Creates tailored resumes for specific applications. |
 | [scoping-interview](./scoping-interview/SKILL.md) | Captures job-search preferences and constraints. |
 
 ### How to Use
 
-Each skill lives in its own folder with a canonical `SKILL.md` file. To activate a skill in Manus or Claude, share the raw URL of the corresponding `SKILL.md` or the pack folder.
+Each skill lives in its own folder with a canonical `SKILL.md` file. For LinkedIn work, use `linkedin-strategist-orchestrator` as the entry point and load only the skills inside `linkedin-pack`. Previous LinkedIn skills were moved to `archive/linkedin-legacy/` and should not be loaded into active agents.
