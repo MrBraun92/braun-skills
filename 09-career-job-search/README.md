@@ -15,17 +15,18 @@ Este diretório reúne as **Agent Skills** especializadas em estratégia de carr
 | [company-discovery](./company-discovery/SKILL.md) | Discover and rank companies in a target industry. Evaluates fit against your constraints and generates optimized job search queries. |
 | [corpus-review](./corpus-review/SKILL.md) | Strategic review of your Resume Corpus against market data. Identifies high-demand skill gaps and strengthens your career story. |
 | [cover-letter](./cover-letter/SKILL.md) | Generate a voice-matched cover letter for a specific job. Analyzes your writing samples and creates a personalized letter that sounds like you. |
-| [gupy-specialist](./gupy-specialist/SKILL.md) | 'Especialista sênior na plataforma Gupy para candidatos. Domina o algoritmo de IA Gaia, ranqueamento de perfis, otimização de currículo/perfil, tes... |
+| [gupy-specialist](./gupy-specialist/SKILL.md) | Especialista na plataforma Gupy para candidatos. |
 | [hidden-job-hunter](./hidden-job-hunter/SKILL.md) | >- |
 | [industry-research](./industry-research/SKILL.md) | Research and tier industries by fit with your profile. Identifies where your skills are most valued and hiring trends are strongest. |
 | [init](./init/SKILL.md) | Initialize your job search project. Imports your resume(s), creates the Resume Corpus, and sets up directory structure. |
-| [job-coach](./job-coach/SKILL.md) | Load Max, the veteran recruiter persona for resume advice, interview prep, and adversarial feedback. Use when discussing resumes, career positionin... |
-| [job-scan](./job-scan/SKILL.md) | Search for jobs at a company OR parse a specific job posting. Extracts requirements, calculates fit scores, and tracks market skills. |
-| [job-scout](./job-scout/SKILL.md) | Load Scout, the market intelligence analyst for job market research, company evaluation, and opportunity discovery. Use when researching industries... |
-| [linkedin-algorithm-expert](./linkedin-algorithm-expert/SKILL.md) | >- |
-| [linkedin-review](./linkedin-review/SKILL.md) | Craft a compelling LinkedIn profile through adversarial review. Optimizes headline, About section, experience descriptions, and skills for recruite... |
-| [resume-tailoring](./resume-tailoring/SKILL.md) | Use when creating tailored resumes for job applications - researches company/role, creates optimized templates, conducts branching experience disco... |
-| [scoping-interview](./scoping-interview/SKILL.md) | Capture your job search preferences through a conversational interview. Creates constraints.yaml with salary, location, role preferences, and dealb... |
+| [job-coach](./job-coach/SKILL.md) | Load Max, the veteran recruiter persona for resume advice, interview prep, and adversarial feedback. |
+| [job-scan](./job-scan/SKILL.md) | Search for jobs at a company or parse a specific job posting. |
+| [job-scout](./job-scout/SKILL.md) | Market intelligence for job discovery and company evaluation. |
+| [linkedin-pack](./linkedin-pack/) | Pack integrado com 5 skills para estratégia, perfil, SEO/discoverability, SSI/networking, conteúdo e operações MCP no LinkedIn. |
+| [linkedin-algorithm-expert](./linkedin-algorithm-expert/SKILL.md) | Skill anterior de referência sobre algoritmo e otimização de perfil. |
+| [linkedin-review](./linkedin-review/SKILL.md) | Workflow anterior de revisão de perfil integrado ao Resume Corpus. |
+| [resume-tailoring](./resume-tailoring/SKILL.md) | Creates tailored resumes for specific applications. |
+| [scoping-interview](./scoping-interview/SKILL.md) | Captures job search preferences and constraints. |
 
 ### Como usar
 
@@ -43,21 +44,22 @@ This directory contains **Agent Skills** specialized in career strategy, resume 
 |---|---|
 | [ai-job-scout](./ai-job-scout/SKILL.md) | >- |
 | [career-strategist](./career-strategist/SKILL.md) | >- |
-| [company-discovery](./company-discovery/SKILL.md) | Discover and rank companies in a target industry. Evaluates fit against your constraints and generates optimized job search queries. |
-| [corpus-review](./corpus-review/SKILL.md) | Strategic review of your Resume Corpus against market data. Identifies high-demand skill gaps and strengthens your career story. |
-| [cover-letter](./cover-letter/SKILL.md) | Generate a voice-matched cover letter for a specific job. Analyzes your writing samples and creates a personalized letter that sounds like you. |
-| [gupy-specialist](./gupy-specialist/SKILL.md) | 'Especialista sênior na plataforma Gupy para candidatos. Domina o algoritmo de IA Gaia, ranqueamento de perfis, otimização de currículo/perfil, tes... |
+| [company-discovery](./company-discovery/SKILL.md) | Discover and rank companies in a target industry. |
+| [corpus-review](./corpus-review/SKILL.md) | Strategic review of the Resume Corpus against market data. |
+| [cover-letter](./cover-letter/SKILL.md) | Generate a voice-matched cover letter for a specific job. |
+| [gupy-specialist](./gupy-specialist/SKILL.md) | Specialist in Brazil's Gupy recruiting platform. |
 | [hidden-job-hunter](./hidden-job-hunter/SKILL.md) | >- |
-| [industry-research](./industry-research/SKILL.md) | Research and tier industries by fit with your profile. Identifies where your skills are most valued and hiring trends are strongest. |
-| [init](./init/SKILL.md) | Initialize your job search project. Imports your resume(s), creates the Resume Corpus, and sets up directory structure. |
-| [job-coach](./job-coach/SKILL.md) | Load Max, the veteran recruiter persona for resume advice, interview prep, and adversarial feedback. Use when discussing resumes, career positionin... |
-| [job-scan](./job-scan/SKILL.md) | Search for jobs at a company OR parse a specific job posting. Extracts requirements, calculates fit scores, and tracks market skills. |
-| [job-scout](./job-scout/SKILL.md) | Load Scout, the market intelligence analyst for job market research, company evaluation, and opportunity discovery. Use when researching industries... |
-| [linkedin-algorithm-expert](./linkedin-algorithm-expert/SKILL.md) | >- |
-| [linkedin-review](./linkedin-review/SKILL.md) | Craft a compelling LinkedIn profile through adversarial review. Optimizes headline, About section, experience descriptions, and skills for recruite... |
-| [resume-tailoring](./resume-tailoring/SKILL.md) | Use when creating tailored resumes for job applications - researches company/role, creates optimized templates, conducts branching experience disco... |
-| [scoping-interview](./scoping-interview/SKILL.md) | Capture your job search preferences through a conversational interview. Creates constraints.yaml with salary, location, role preferences, and dealb... |
+| [industry-research](./industry-research/SKILL.md) | Research and tier industries by fit. |
+| [init](./init/SKILL.md) | Initialize the job search project and Resume Corpus. |
+| [job-coach](./job-coach/SKILL.md) | Recruiter-style resume and interview guidance. |
+| [job-scan](./job-scan/SKILL.md) | Search companies or parse job postings. |
+| [job-scout](./job-scout/SKILL.md) | Job-market intelligence and opportunity discovery. |
+| [linkedin-pack](./linkedin-pack/) | Integrated 5-skill pack for LinkedIn strategy, profile optimization, SEO/discoverability, SSI/networking, content, and MCP operations. |
+| [linkedin-algorithm-expert](./linkedin-algorithm-expert/SKILL.md) | Previous reference skill for LinkedIn algorithm and profile optimization. |
+| [linkedin-review](./linkedin-review/SKILL.md) | Previous Resume Corpus-integrated LinkedIn review workflow. |
+| [resume-tailoring](./resume-tailoring/SKILL.md) | Creates tailored resumes for specific applications. |
+| [scoping-interview](./scoping-interview/SKILL.md) | Captures job-search preferences and constraints. |
 
 ### How to Use
 
-Each skill lives in its own folder with a canonical `SKILL.md` file. To activate a skill in Manus or Claude, share the raw URL of the corresponding `SKILL.md`.
+Each skill lives in its own folder with a canonical `SKILL.md` file. To activate a skill in Manus or Claude, share the raw URL of the corresponding `SKILL.md` or the pack folder.
