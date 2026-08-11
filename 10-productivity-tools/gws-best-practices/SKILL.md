@@ -29,7 +29,7 @@ When tasked with creating a Google Doc, you MUST follow this workflow instead of
 **Example Upload Command:**
 ```bash
 gws drive files create \
-  --upload /home/ubuntu/your_document.docx \
+  --upload your_document.docx \
   --json '{"name": "Your Document Title", "mimeType": "application/vnd.google-apps.document"}' \
   --upload-content-type "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
 ```

@@ -12,7 +12,7 @@ Search 7 verified GitHub repositories for Agent Skills.
 ### 1. Fetch Skill List
 
 ```bash
-python3 /home/ubuntu/skills/internet-skill-finder/scripts/fetch_skills.py --search "keyword"
+python3 scripts/fetch_skills.py --search "keyword"
 ```
 
 Options: `--list` (all skills), `--online` (real-time fetch), `--json` (structured output)
@@ -20,7 +20,7 @@ Options: `--list` (all skills), `--online` (real-time fetch), `--json` (structur
 ### 2. Deep Dive (if needed)
 
 ```bash
-python3 /home/ubuntu/skills/internet-skill-finder/scripts/fetch_skills.py --deep-dive REPO SKILL
+python3 scripts/fetch_skills.py --deep-dive REPO SKILL
 ```
 
 ### 3. Present Results

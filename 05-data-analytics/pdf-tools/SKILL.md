@@ -15,7 +15,7 @@ Efficient PDF manipulation using bundled Python scripts.
 Rotate pages in a PDF by 90, 180, or 270 degrees.
 
 ```bash
-python /home/ubuntu/skills/pdf-tools/scripts/rotate_pdf.py <input.pdf> <output.pdf> <rotation> [pages]
+python scripts/rotate_pdf.py <input.pdf> <output.pdf> <rotation> [pages]
 ```
 
 **Parameters:**
@@ -24,7 +24,7 @@ python /home/ubuntu/skills/pdf-tools/scripts/rotate_pdf.py <input.pdf> <output.p
 
 **Example:**
 ```bash
-python /home/ubuntu/skills/pdf-tools/scripts/rotate_pdf.py report.pdf report_rotated.pdf 90 1-3
+python scripts/rotate_pdf.py report.pdf report_rotated.pdf 90 1-3
 ```
 
 ### Merge PDFs
@@ -32,12 +32,12 @@ python /home/ubuntu/skills/pdf-tools/scripts/rotate_pdf.py report.pdf report_rot
 Combine multiple PDF files into a single PDF.
 
 ```bash
-python /home/ubuntu/skills/pdf-tools/scripts/merge_pdfs.py <output.pdf> <input1.pdf> <input2.pdf> [input3.pdf ...]
+python scripts/merge_pdfs.py <output.pdf> <input1.pdf> <input2.pdf> [input3.pdf ...]
 ```
 
 **Example:**
 ```bash
-python /home/ubuntu/skills/pdf-tools/scripts/merge_pdfs.py combined.pdf chapter1.pdf chapter2.pdf chapter3.pdf
+python scripts/merge_pdfs.py combined.pdf chapter1.pdf chapter2.pdf chapter3.pdf
 ```
 
 ### Extract Pages
@@ -45,7 +45,7 @@ python /home/ubuntu/skills/pdf-tools/scripts/merge_pdfs.py combined.pdf chapter1
 Extract specific pages from a PDF into a new file.
 
 ```bash
-python /home/ubuntu/skills/pdf-tools/scripts/extract_pages.py <input.pdf> <output.pdf> <pages>
+python scripts/extract_pages.py <input.pdf> <output.pdf> <pages>
 ```
 
 **Parameters:**
@@ -53,7 +53,7 @@ python /home/ubuntu/skills/pdf-tools/scripts/extract_pages.py <input.pdf> <outpu
 
 **Example:**
 ```bash
-python /home/ubuntu/skills/pdf-tools/scripts/extract_pages.py document.pdf summary.pdf 1,5-7,10
+python scripts/extract_pages.py document.pdf summary.pdf 1,5-7,10
 ```
 
 ## Usage Guidelines

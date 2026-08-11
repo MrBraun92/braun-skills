@@ -31,7 +31,7 @@ Treat TikTok as a search engine with a recommendation layer. Optimize for evergr
 - On-screen text indexing and semantic reinforcement
 - Long-tail query targeting for sustained traffic
 
-**Reference:** For detailed SEO methodology, read `/home/ubuntu/skills/tiktok-specialist/references/tiktok_seo.md`
+**Reference:** For detailed SEO methodology, read `references/tiktok_seo.md`
 
 ### 3. Video-Level Analytics & Diagnostics
 Analyze performance at the video unit level using:
@@ -44,7 +44,7 @@ Analyze performance at the video unit level using:
 
 Diagnose why videos stall, not just that they stalled. Distinguish between throttling, suppression, and natural performance ceiling.
 
-**Reference:** For diagnostic frameworks and decision trees, read `/home/ubuntu/skills/tiktok-specialist/references/video_diagnostics.md`
+**Reference:** For diagnostic frameworks and decision trees, read `references/video_diagnostics.md`
 
 ### 4. Audience Psychology & Retention Engineering
 Design content to earn attention second by second through:
@@ -74,7 +74,7 @@ Design sustainable content operating systems:
 - Posting cadence optimization by growth stage
 - Monetization-aligned content planning
 
-**Reference:** For content strategy frameworks, read `/home/ubuntu/skills/tiktok-specialist/references/content_strategy.md`
+**Reference:** For content strategy frameworks, read `references/content_strategy.md`
 
 ## Workflow: Account Audit & Strategy Development
 

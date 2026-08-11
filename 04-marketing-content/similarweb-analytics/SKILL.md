@@ -1,146 +1,117 @@
 ---
 name: similarweb-analytics
-description: "Analyze websites and domains using SimilarWeb traffic data. Get traffic metrics, engagement stats, global rankings, traffic sources, and geographic distribution for comprehensive website research."
+description: >-
+  Website traffic intelligence without paid APIs: estimates traffic, ranking, traffic sources,
+  geography and engagement for any domain using the public SimilarWeb website, Google Trends,
+  manual SERP analysis and the client's own GA4/Search Console data. Use when researching a
+  competitor's traffic, sizing a market, or benchmarking a client site against rivals.
+  Trigger on quanto trafego tem o site, analisar concorrente, trafego do concorrente,
+  ranking do site, fontes de trafego, de onde vem as visitas, benchmark de sites,
+  website traffic, competitor traffic analysis, SimilarWeb, domain research, traffic sources.
 ---
 
-# SimilarWeb Analytics
+# SimilarWeb Analytics — Inteligência de Tráfego Portável
 
-Comprehensive website and domain analysis using SimilarWeb traffic data.
+Análise de tráfego, ranking, fontes de visitas, geografia e engajamento de qualquer site — **sem depender de API paga nem de runtime especial**. Esta skill funciona em qualquer máquina usando apenas navegador/WebFetch e fontes públicas.
 
-## Core Capabilities
+## O que esta skill entrega
 
-- **Traffic Analysis**: Total visits, unique visitors, traffic trends
-- **Engagement Metrics**: Bounce rate, pages per visit, average visit duration
-- **Global Ranking**: Website ranking over time
-- **Traffic Sources**: Marketing channels (desktop and mobile)
-- **Geographic Distribution**: Traffic breakdown by country
+- **Tráfego**: estimativa de visitas mensais e tendência (subindo/caindo)
+- **Ranking**: posição global, por país e por categoria
+- **Fontes de tráfego**: busca orgânica, busca paga, direto, social, referrals, e-mail
+- **Geografia**: principais países de origem das visitas
+- **Engajamento**: taxa de rejeição, páginas por visita, duração média da visita
+- **Benchmark competitivo**: comparação lado a lado entre o site do cliente e concorrentes
 
-## API Usage
+## Método 1 — Página pública do SimilarWeb (principal)
 
-All APIs use `ApiClient` from `/opt/.manus/.sandbox-runtime`. Common parameters:
-- `domain`: Website domain (e.g., "google.com")
-- `start_date`: Start date (YYYY-MM). Max 12 months ago
-- `end_date`: End date (YYYY-MM). Max 12 months ago, default is 1 month ago (most recent complete month)
-- `main_domain_only`: Exclude subdomains if True (default: False)
+O SimilarWeb publica gratuitamente um resumo por domínio em:
 
-**Default time ranges vary by API:**
-- Global Rank, Visits Total, Unique Visit, Bounce Rate: default **6 months**
-- Traffic Sources (Desktop/Mobile), Traffic by Country: default **3 months**
-
-### Get Global Rank
-
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
-
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_global_rank', path_params={'domain': 'amazon.com'})
+```
+https://www.similarweb.com/website/DOMINIO/
 ```
 
-### Get Website Visits Total
+Exemplo: `https://www.similarweb.com/website/besourotattoo.com.br/`
 
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+**Como usar:** abra a URL com WebFetch ou no browser e extraia da página pública:
+- Rank global, rank no país, rank na categoria
+- Total de visitas do último mês e variação mensal
+- Bounce rate, páginas por visita, duração média
+- Top países e divisão de canais (gráficos "Marketing Channels" e "Top Countries")
+- Principais palavras-chave orgânicas (amostra limitada na versão grátis)
 
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_visits_total',
-    path_params={'domain': 'amazon.com'},
-    query={'country': 'world', 'granularity': 'monthly', 'start_date': '2025-07', 'end_date': '2025-12'})
+**Limitações da versão pública (avisar sempre ao cliente):**
+- Sites com pouco tráfego (regra prática: abaixo de ~5 mil visitas/mês) aparecem como "não há dados suficientes". Isso é o caso da maioria dos negócios locais brasileiros — um estúdio de tatuagem em Florianópolis quase nunca terá dados no SimilarWeb. Para negócio local, o benchmark relevante é Perfil da Empresa no Google + Instagram, não SimilarWeb.
+- Números são **estimativas por modelagem**, não medição direta. Trate como ordem de grandeza, nunca como valor exato.
+- Histórico limitado a ~3 meses na versão grátis.
+- A página pode exigir interação no browser (scroll, consentimento de cookies) para carregar todos os blocos; se o WebFetch retornar vazio, usar o browser.
+
+## Método 2 — Google Trends (demanda relativa)
+
+Quando o SimilarWeb não tem dados (sites pequenos/locais), o Google Trends mede a **demanda pela marca e pelo tema**:
+
+```
+https://trends.google.com.br/trends/explore?q=TERMO&geo=BR
 ```
 
-### Get Unique Visit
+**Usos práticos:**
+- Comparar interesse de busca entre marcas concorrentes (até 5 termos simultâneos)
+- Ver sazonalidade do nicho (ex.: "tatuagem" cresce no verão? antes de eventos?)
+- Filtrar por estado/cidade (`geo=BR-SC`) para demanda local
+- "Assuntos relacionados" e "pesquisas relacionadas" revelam termos em alta no nicho
 
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+Trends mostra **interesse relativo (0–100)**, não volume absoluto. Serve para comparação e tendência, não para dizer "X pessoas buscaram".
 
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_unique_visit',
-    path_params={'domain': 'amazon.com'},
-    query={'start_date': '2025-07', 'end_date': '2025-12'})
-```
+## Método 3 — Análise SERP manual (quem captura a demanda)
 
-### Get Bounce Rate
+Buscar no Google os termos comerciais do nicho e mapear quem aparece:
 
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+1. Listar 5–10 termos que um cliente digitaria (ex.: "tatuagem fine line florianópolis", "estúdio de tatuagem campeche")
+2. Para cada termo, registrar: quem está no pack local do Maps, quem está no top 10 orgânico, quem anuncia
+3. Montar tabela concorrente × termo → revela quem domina a captura de demanda mesmo sem dados de tráfego
+4. Clicar nos sites do top 3 e observar: para onde direcionam o clique? No Brasil, negócio local bem otimizado direciona para o **WhatsApp** — se o concorrente força formulário ou e-mail, isso é fraqueza explorável no funil do cliente
 
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_bounce_rate',
-    path_params={'domain': 'amazon.com'},
-    query={'country': 'world', 'granularity': 'monthly', 'start_date': '2025-07', 'end_date': '2025-12'})
-```
+Usar janela anônima ou avisar que resultados são personalizados por localização/histórico.
 
-### Get Traffic Sources - Desktop
+## Método 4 — Dados do próprio cliente (GA4 + Search Console)
 
-Returns breakdown by channel: Organic Search, Paid Search, Direct, Display Ads, Email, Referrals, Social Media.
+Quando o cliente dá acesso, os dados dele são a única fonte **medida** (não estimada):
 
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+- **GA4**: visitas reais, fontes de tráfego reais, geografia real, engajamento real. Comparar com as estimativas do SimilarWeb dos concorrentes (mesma ordem de grandeza? canal dominante diferente?)
+- **Search Console**: consultas que geram impressão/clique, posição média, páginas que rankeiam. Cruzar com a análise SERP manual: termos onde o cliente tem impressão mas não clique = oportunidade de título/descrição
+- Métrica de funil que importa para negócio local BR: **cliques no botão de WhatsApp** (configurar como evento-chave no GA4). Tráfego sem conversa iniciada no WhatsApp é vaidade
 
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_traffic_sources_desktop',
-    path_params={'domain': 'amazon.com'},
-    query={'country': 'world', 'granularity': 'monthly', 'start_date': '2025-07', 'end_date': '2025-12'})
-```
+## Roteiro de benchmark competitivo (passo a passo)
 
-### Get Traffic Sources - Mobile
+1. Definir 3–5 concorrentes diretos com o cliente
+2. Para cada domínio, coletar a página pública do SimilarWeb (Método 1); registrar "sem dados" quando for o caso — isso também é informação (concorrente pequeno)
+3. Rodar Google Trends comparando as marcas + termos do nicho (Método 2)
+4. Mapear a SERP dos termos comerciais (Método 3)
+5. Cruzar com GA4/Search Console do cliente (Método 4)
+6. Entregar tabela única: domínio × visitas estimadas × canal dominante × posição SERP × presença local × destino do clique (WhatsApp? formulário?)
+7. Recomendar 3 ações priorizadas por impacto no funil (que no Brasil termina no WhatsApp)
 
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+## O que SÓ é possível com a API paga do SimilarWeb
 
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_traffic_sources_mobile',
-    path_params={'domain': 'amazon.com'},
-    query={'country': 'world', 'granularity': 'monthly', 'start_date': '2025-07', 'end_date': '2025-12'})
-```
+Ser honesto com o cliente sobre o teto da versão gratuita. Exigem assinatura paga (Web Intelligence / API):
 
-### Get Total Traffic by Country
+- Histórico longo (12–36 meses) e granularidade diária/semanal
+- Lista completa de palavras-chave orgânicas e pagas por concorrente
+- Divisão desktop × mobile detalhada
+- Sites de baixo tráfego com estimativa (a versão paga cobre mais domínios pequenos, ainda assim com margem de erro alta)
+- Dados de apps, audiência demográfica, jornada entre sites, export em massa via API
 
-Returns traffic share, visits, pages per visit, average time, bounce rate and rank by country.
+Se o projeto exigir isso, a recomendação é orçar a assinatura — nunca fingir precisão que a fonte gratuita não tem.
 
-- `limit`: Number of countries to return (default: 1, max: 10)
-- **Date range limit**: max 3 months (unlike other APIs)
+## Regra de frescor
 
-```python
-import sys
-sys.path.append('/opt/.manus/.sandbox-runtime')
-from data_api import ApiClient
+Layout da página pública do SimilarWeb, limites da versão grátis e URLs do Google Trends mudam com frequência. **Sempre verificar no momento da execução** o que a página realmente exibe antes de prometer um dado ao cliente. Todo número de tráfego de terceiros deve ser rotulado como **estimativa**; heurísticas desta skill (ex.: corte de ~5 mil visitas/mês) são heurísticas, não regra oficial da plataforma.
 
-client = ApiClient()
-result = client.call_api('SimilarWeb/get_total_traffic_by_country',
-    path_params={'domain': 'amazon.com'},
-    query={'start_date': '2025-10', 'end_date': '2025-12', 'limit': '10'})
-```
+## Fontes oficiais
 
-## When to Use
-
-Invoke APIs when users mention:
-- Domain names: "google.com", "amazon.com"
-- Traffic queries: "traffic", "visits", "visitors"
-- Ranking queries: "rank", "ranking", "how popular"
-- Engagement queries: "bounce rate", "engagement"
-- Source queries: "traffic sources", "marketing channels"
-- Geographic queries: "countries", "geographic"
-- Comparison queries: "compare", "vs"
-
-## Data Limitations
-
-- Historical data: max 12 months
-- Geography: worldwide only
-- Granularity: monthly only
-- Latest data: last complete month
-
-## Important: Save Data to Files
-
-API calls may fail mid-execution due to credit depletion. **Always save all retrieved data to files immediately** to avoid data loss and prevent redundant API calls.
+- SimilarWeb: https://www.similarweb.com
+- Google Trends: https://trends.google.com.br
+- Google Search Central: https://developers.google.com/search/docs?hl=pt-br
+- GA4 (Central de Ajuda): https://support.google.com/analytics
+- Search Console (Central de Ajuda): https://support.google.com/webmasters
+- Perfil da Empresa no Google: https://support.google.com/business

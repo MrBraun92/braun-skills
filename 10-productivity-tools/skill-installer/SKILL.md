@@ -49,12 +49,12 @@ Determine the installation source:
 - **Skill list**: user provides names of skills to create or import
 - **From scratch**: user describes what the skill should do
 
-If the source is a GitHub repo, read the README or browse the directory tree to identify which skills are new (not yet installed locally at `/home/ubuntu/skills/`).
+If the source is a GitHub repo, read the README or browse the directory tree to identify which skills are new (not yet installed locally at `~/.claude/skills/`).
 
 To check which skills are already installed:
 
 ```bash
-ls /home/ubuntu/skills/
+ls ~/.claude/skills/
 ```
 
 ### Step 2 — Access the skill content
@@ -82,7 +82,7 @@ Then read files directly from `/tmp/skills-import/{skill-name}/SKILL.md`.
 Use the Skill Creator init script to scaffold the directory:
 
 ```bash
-python /home/ubuntu/skills/skill-creator/scripts/init_skill.py {skill-name}
+python ~/.claude/skills/skill-creator/scripts/init_skill.py {skill-name}
 ```
 
 Then write the full SKILL.md content based on the user's description.
@@ -92,7 +92,7 @@ Then write the full SKILL.md content based on the user's description.
 For each skill, save the content to:
 
 ```
-/home/ubuntu/skills/{skill-name}/SKILL.md
+~/.claude/skills/{skill-name}/SKILL.md
 ```
 
 Every SKILL.md must have valid YAML frontmatter with `name` and `description` fields:
@@ -109,7 +109,7 @@ description: What the skill does and when to use it.
 Run the official validator for each skill:
 
 ```bash
-python /home/ubuntu/skills/skill-creator/scripts/quick_validate.py {skill-name}
+python ~/.claude/skills/skill-creator/scripts/quick_validate.py {skill-name}
 ```
 
 Fix any validation errors before proceeding. Common issues: missing frontmatter fields, SKILL.md over 500 lines, broken Markdown.
@@ -118,7 +118,7 @@ Fix any validation errors before proceeding. Common issues: missing frontmatter 
 
 Send all SKILL.md files as **attachments** in a single `result` message using the `message` tool.
 
-The system automatically detects the path pattern `/home/ubuntu/skills/*/SKILL.md`, packages each skill directory into a `.skill` file, and renders an interactive card in the frontend with three options:
+The system automatically detects the path pattern `~/.claude/skills/*/SKILL.md`, packages each skill directory into a `.skill` file, and renders an interactive card in the frontend with three options:
 
 - **Add to My Skills** — saves the skill permanently to the user's Manus account
 - **Download** — downloads the `.skill` file
@@ -149,7 +149,7 @@ Before delivering, verify:
 
 - every SKILL.md has `name` and `description` in frontmatter
 - no SKILL.md exceeds 500 lines
-- all files exist at `/home/ubuntu/skills/{skill-name}/SKILL.md`
+- all files exist at `~/.claude/skills/{skill-name}/SKILL.md`
 - validation passed for each skill (or errors were fixed)
 - the final message uses `result` type with all SKILL.md paths as attachments
 

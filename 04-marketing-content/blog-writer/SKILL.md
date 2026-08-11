@@ -1,6 +1,6 @@
 ---
 name: blog-writer
-description: Professional blog post creation workflow with research, outlining, and writing phases. Use when users request blog posts, articles, or content marketing pieces that require structured research and professional writing standards.
+description: Professional blog post creation workflow with research, outlining, and writing phases. Use when users request blog posts, articles, or content marketing pieces that require structured research and professional writing standards. Prefer content-production for new work; kept for legacy compatibility.
 license: MIT
 ---
 
@@ -19,7 +19,7 @@ Blog writing follows this sequence:
 
 ## Phase 1: Research
 
-Before writing, conduct thorough research using the checklist at `/home/ubuntu/skills/blog-writer/references/research_checklist.md`.
+Before writing, conduct thorough research using the checklist at `references/research_checklist.md`.
 
 **Key activities**:
 - Define core question and audience knowledge level
@@ -32,7 +32,7 @@ Before writing, conduct thorough research using the checklist at `/home/ubuntu/s
 
 ## Phase 2: Outline
 
-Create a structured outline using the template at `/home/ubuntu/skills/blog-writer/templates/outline_template.md`.
+Create a structured outline using the template at `templates/outline_template.md`.
 
 **Outline structure**:
 - Working title with target keyword
@@ -52,7 +52,7 @@ Create a structured outline using the template at `/home/ubuntu/skills/blog-writ
 
 ## Phase 3: Writing
 
-Draft the full article following the style guide at `/home/ubuntu/skills/blog-writer/references/style_guide.md`.
+Draft the full article following the style guide at `references/style_guide.md`.
 
 **Writing guidelines**:
 
@@ -95,11 +95,11 @@ Check the draft against quality standards:
 
 ## Quick Reference
 
-**For style questions**: Read `/home/ubuntu/skills/blog-writer/references/style_guide.md`
+**For style questions**: Read `references/style_guide.md`
 
-**For research guidance**: Read `/home/ubuntu/skills/blog-writer/references/research_checklist.md`
+**For research guidance**: Read `references/research_checklist.md`
 
-**For outlining**: Copy `/home/ubuntu/skills/blog-writer/templates/outline_template.md`
+**For outlining**: Copy `templates/outline_template.md`
 
 ## Common Patterns
 
