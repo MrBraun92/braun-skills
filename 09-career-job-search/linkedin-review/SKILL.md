@@ -5,10 +5,6 @@ description: Craft a compelling LinkedIn profile through adversarial review. Opt
 
 # LinkedIn Profile Review Workflow
 
-> **LEGACY / ARQUIVADA:** substituída pelo pack ativo em `09-career-job-search/linkedin-pack/`. Não carregar em agentes ativos.
->
-> O workflow externo citado abaixo não estava presente no repositório no momento do arquivamento. Este arquivo foi preservado exatamente como referência histórica.
-
 **Load and execute:** `workflows/linkedin-review/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:

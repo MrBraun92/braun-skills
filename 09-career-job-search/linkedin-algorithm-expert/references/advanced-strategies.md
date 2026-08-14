@@ -1,7 +1,5 @@
 # Estratégias Avançadas de LinkedIn
 
-> **LEGACY / ARQUIVADA:** preservada apenas para histórico. Não carregar em agentes ativos.
-
 ## Conteúdo para Aumentar Visibilidade
 
 ### Frequência e Formato Ideal

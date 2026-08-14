@@ -1,7 +1,5 @@
 # Templates de Outreach para Recrutadores
 
-> **LEGACY / ARQUIVADA:** preservada apenas para histórico. Não carregar em agentes ativos.
-
 ## Regras de Ouro
 1. **Nunca enviar sem pesquisar** — mencionar algo específico da empresa/vaga
 2. **Máximo 3 parágrafos** — recrutadores recebem dezenas de mensagens por dia

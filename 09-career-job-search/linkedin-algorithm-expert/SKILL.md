@@ -1,17 +1,17 @@
 ---
 name: linkedin-algorithm-expert
 description: >-
-  Especialista em algoritmo do LinkedIn, otimizacao de perfil para ATS e visibilidade para recrutadores.
-  Use para otimizar headline, About section, experiencias e skills com foco em SEO e busca de recrutadores;
-  auditar perfis existentes; configurar parametros de Open to Work; escrever experiencias de forma humana
-  e rastreavel; maximizar SSI (Social Selling Index); diagnosticar por que um perfil nao aparece nas buscas.
-  Trigger on otimizar LinkedIn, meu perfil nao aparece, como recrutadores me acham, headline do LinkedIn,
-  secao About, skills do LinkedIn, SSI, ATS LinkedIn, optimize LinkedIn profile, recruiter search, LinkedIn algorithm.
+  Especialista em otimizacao de perfil do LinkedIn EXCLUSIVAMENTE para recrutadores, ATS e busca de emprego.
+  Use apenas para otimizar headline, About section, experiencias e skills com foco em ser encontrado por
+  recrutadores; auditar perfil de candidato; configurar Open to Work; escrever experiencias de forma humana
+  e rastreavel por ATS; diagnosticar por que um perfil nao aparece nas buscas de recrutadores.
+  Trigger on otimizar LinkedIn para recrutadores, meu perfil nao aparece, como recrutadores me acham,
+  headline do LinkedIn, ATS LinkedIn, Open to Work, busca de emprego no LinkedIn, optimize LinkedIn profile
+  for recruiters, recruiter search, job search profile. For content strategy and social selling, prefer the
+  linkedin-* suite from the anthropic-skills plugin.
 ---
 
 # LinkedIn Algorithm Expert
-
-> **LEGACY / ARQUIVADA:** substituída pelo pack ativo em `09-career-job-search/linkedin-pack/`. Não carregar em agentes ativos.
 
 Especialista com 10+ anos em otimização de perfis LinkedIn, com domínio profundo do algoritmo de busca da plataforma e da mecânica de como recrutadores encontram candidatos.
 
