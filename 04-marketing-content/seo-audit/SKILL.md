@@ -1,189 +1,159 @@
 ---
 name: seo-audit
-description: Run a comprehensive SEO audit — keyword research, on-page analysis, content gaps, technical checks, and competitor comparison. Use when assessing a site's SEO health, when finding keyword opportunities and content gaps competitors own, or when you need a prioritized action plan split into quick wins and strategic investments.
+description: Canonical SEO strategy and audit router. Use for technical SEO, indexing, ranking drops, keyword and content strategy, structured data, Search Console, local or ecommerce SEO, Core Web Vitals, and any request to improve organic visibility in Google. Always checks current Google Search Central documentation before prescribing tactics, then routes execution through vetted professional repositories and available tools.
 ---
 
-# /seo-audit
+# SEO Audit and Strategy Router
 
-> If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
+This is the repository's **canonical SEO authority**. Do not rely on memorized SEO rules when current documentation or live evidence can be checked.
 
-Audit a website's SEO health, research keyword opportunities, identify content gaps, and benchmark against competitors. Produces a prioritized action plan a marketer can execute immediately.
+## Non-negotiable source order
 
-## Trigger
+For every substantive SEO strategy, audit, implementation plan, or recommendation:
 
-User runs `/seo-audit` or asks for an SEO audit, keyword research, content gap analysis, technical SEO check, or competitor SEO comparison.
+1. **Consult current Google Search Central documentation first** at `https://developers.google.com/search?hl=pt-br` and the relevant linked pages.
+2. Check the page's **last-updated date** and record the research date in the output.
+3. Use first-party Google tools and data when available: Search Console, URL Inspection, Rich Results Test, PageSpeed Insights, CrUX, Lighthouse, Google Trends, Merchant Center, and Business Profile.
+4. Use the vetted repositories in `references/source-registry.md` as implementation and diagnostic references, never as authority over Google.
+5. Use secondary SEO commentary only to generate hypotheses. Validate each material recommendation against first-party documentation, observed crawl/index data, or a reproducible test.
 
-## Inputs
+If sources conflict, Google documentation and direct site evidence win. State uncertainty instead of presenting folklore as a rule.
 
-Gather the following from the user. If not provided, ask before proceeding:
+## Router
 
-1. **URL or domain** — the site to audit, or a topic/keyword if running in keyword research mode
+Classify the request and run only the necessary modules:
 
-2. **Audit type** — one of:
-   - **Full site audit** — end-to-end SEO review covering all sections below
-   - **Keyword research** — identify keyword opportunities for a topic or domain
-   - **Content gap analysis** — find topics competitors rank for that you don't
-   - **Technical SEO check** — crawlability, speed, structured data, and infrastructure issues
-   - **Competitor SEO comparison** — head-to-head SEO benchmarking against specific competitors
+| Request | Route |
+|---|---|
+| Crawl, indexing, rendering, robots, sitemap, canonicals, redirects | Technical discovery |
+| Traffic or ranking decline | Incident diagnosis |
+| Keyword, intent, content gaps, topical architecture | Search demand and content |
+| Titles, snippets, headings, internal links, media | On-page and information architecture |
+| Schema or rich results | Structured data |
+| Speed, UX, mobile, CWV | Page experience |
+| Local business | Local discovery |
+| Products or ecommerce | Commerce discovery |
+| International or multilingual | International SEO |
+| AI Overviews, AI Mode, ChatGPT, Claude, Gemini, citations | Route jointly to `geo-ai-discovery` |
+| Code or implementation changes | Route findings to the appropriate engineering skill after evidence is collected |
 
-   If not specified, default to **full site audit**.
+## Evidence gate
 
-3. **Target keywords or topics** (optional) — specific keywords the user is already targeting or wants to rank for
+Before diagnosing a URL or domain, gather as much of the following as access permits:
 
-4. **Competitors** (optional) — domains or companies to compare against. If not provided and the audit type requires competitor data, use web search to identify 2-3 likely competitors based on the user's domain and keyword space.
+- crawlable HTML and HTTP status;
+- robots.txt, sitemap, canonical, robots meta and response headers;
+- rendered page when JavaScript affects important content;
+- Search Console Performance, Pages/Indexing and URL Inspection data;
+- PageSpeed Insights or CrUX field data and Lighthouse lab data;
+- structured-data output from Rich Results Test or Schema Markup Validator;
+- internal-link graph, orphan pages, redirect chains and duplicate clusters;
+- analytics and conversion data, separated from rankings and impressions;
+- date of deployment, migration, redesign, content changes or known Google updates.
 
-## Process
+Never invent search volume, keyword difficulty, ranking, backlinks, traffic, CWV, domain authority, competitor data, or indexation. Label estimates and proxies explicitly.
 
-### 1. Keyword Research
+## Current-doc verification protocol
 
-Research keywords related to the user's domain, topic, or target keywords.
+At execution time, search or open the exact relevant Google documentation. At minimum, check:
 
-**If ~~SEO tools are connected:**
-- Pull keyword data, search volume, keyword difficulty scores, and ranking positions automatically
-- Identify keywords the site currently ranks for and where it's gaining or losing ground
+- Search Essentials and spam policies;
+- SEO Starter Guide and developer guide;
+- crawling/indexing controls;
+- canonicalization and duplicate handling;
+- sitemaps and robots.txt;
+- JavaScript SEO when relevant;
+- structured-data feature documentation for the exact type;
+- Core Web Vitals and page-experience guidance;
+- Search Console documentation and data limitations;
+- AI features and your website when AI Overviews or AI Mode are in scope.
 
-**If ~~product analytics are connected:**
-- Cross-reference keyword targets with actual organic traffic data to validate which keywords are driving visits and conversions
+Do not freeze numeric limits as universal laws. In particular:
 
-**If tools are not connected:**
-- Use web search to research the keyword landscape
-- Note: "For more precise volume and difficulty data, connect an SEO tool like Ahrefs or Semrush via MCP. The audit will auto-populate with ranking data."
+- title and snippet display is query-, device-, and rendering-dependent;
+- meta descriptions are suggestions, not guaranteed snippets;
+- one H1 can be a useful convention, but multiple H1 elements are not automatically a Google violation;
+- word count is not a ranking factor and thinness is judged by usefulness, originality, intent coverage, and evidence rather than a fixed threshold;
+- Lighthouse scores are diagnostics, not direct ranking factors;
+- structured data must match visible content and does not guarantee a rich result;
+- indexing and ranking are never guaranteed.
 
-For each keyword opportunity, assess:
-- **Primary keywords** — high-intent terms directly tied to the user's product or service
-- **Secondary keywords** — supporting terms and variations
-- **Search volume signals** — relative demand (high, medium, low) based on available data
-- **Keyword difficulty** — how competitive the term is (easy, moderate, hard)
-- **Long-tail opportunities** — specific, lower-competition phrases with clear intent
-- **Question-based keywords** — "how to", "what is", "why does" queries that mirror People Also Ask results
-- **Intent classification** — informational, navigational, commercial, or transactional
+## Audit workflow
 
-### 2. On-Page SEO Audit
+### 1. Define business outcome and search surface
 
-For each key page (homepage, top landing pages, recent blog posts), evaluate:
+Identify the conversion goal, audience, geography, languages, device mix, page types, search intents, and whether the target is classic results, local, shopping, images, video, news, AI features, or several surfaces.
 
-- **Title tags** — present, unique, within 50-60 characters, includes target keyword
-- **Meta descriptions** — present, compelling, within 150-160 characters, includes a call to action
-- **H1 tags** — exactly one per page, includes primary keyword
-- **H2/H3 structure** — logical hierarchy, uses secondary keywords where natural
-- **Keyword usage** — primary keyword appears in the first 100 words, used naturally throughout, not over-stuffed
-- **Internal linking** — pages link to related content, orphan pages identified, anchor text is descriptive
-- **Image alt text** — all images have descriptive alt attributes, keywords included where relevant
-- **URL structure** — clean, readable, includes keywords, no excessive parameters or depth
+### 2. Establish baseline
 
-### 3. Content Gap Analysis
+Create a dated baseline for clicks, impressions, CTR, average position, indexed URLs, conversions, branded/non-branded demand, top landing pages, query clusters, CWV, crawl errors, and major releases. Segment before comparing.
 
-Identify what's missing from the user's content strategy:
+### 3. Technical discovery
 
-- **Competitor topic coverage** — topics and keywords competitors rank for that the user's site does not cover
-- **Content freshness** — pages that haven't been updated in 12+ months and may be losing rankings
-- **Thin content** — pages with insufficient depth to rank (under 300 words for informational queries, lacking substance)
-- **Missing content types** — formats competitors use that the user doesn't (guides, comparison pages, glossaries, tools, templates)
-- **Funnel gaps** — missing content at specific buyer journey stages (awareness, consideration, decision)
-- **Topic clusters** — opportunities to build pillar pages with supporting content
+Test server accessibility, status codes, redirect behavior, robots and noindex controls, canonical consistency, sitemap quality, internal discovery, rendering, mobile parity, pagination/facets, duplicate parameters, hreflang, soft 404s, security, and structured-data eligibility.
 
-### 4. Technical SEO Checklist
+Prioritize failures that block crawling, indexing, canonical consolidation, rendering of primary content, or conversion. Do not confuse an audit-tool warning with a confirmed Google issue.
 
-Evaluate technical foundations that affect crawlability and rankings:
+### 4. Search demand and content
 
-- **Page speed** — identify slow-loading pages and likely causes (large images, render-blocking scripts, excessive redirects)
-- **Mobile-friendliness** — responsive design, tap targets, font sizes, viewport configuration
-- **Structured data** — opportunities for schema markup (FAQ, HowTo, Product, Article, Organization, Breadcrumb)
-- **Crawlability** — robots.txt configuration, XML sitemap presence and accuracy, canonical tags, noindex/nofollow usage
-- **Broken links** — internal and external 404s, redirect chains
-- **HTTPS** — secure connection, mixed content issues
-- **Core Web Vitals signals** — LCP, FID/INP, CLS indicators based on observable page behavior
-- **Indexation** — pages that should be indexed but may not be, duplicate content risks
+Build a query-to-page map based on intent and business value. Review first-party SERPs and competitors for coverage, format, evidence, freshness, entity relationships, and unmet user tasks. Create or improve pages only when they add original value, experience, data, tools, examples, or clearer decision support.
 
-### 5. Competitor SEO Comparison
+Avoid scaled low-value pages, doorway patterns, copied summaries, keyword stuffing, fabricated expertise, and content created mainly to manipulate rankings.
 
-For each competitor, compare:
+### 5. On-page and architecture
 
-- **Keyword overlap** — keywords both sites rank for, and where each site ranks higher
-- **Keyword gaps** — terms the competitor ranks for that the user does not
-- **Domain authority signals** — relative site strength based on backlink profiles, referring domains, and content depth
-- **Content depth** — average content length, topic coverage breadth, publishing frequency
-- **Backlink profile observations** — types of sites linking to competitors, link-worthy content they've produced
-- **SERP feature ownership** — which competitor appears in featured snippets, People Also Ask, image packs, or knowledge panels
-- **Technical advantages** — site speed differences, mobile experience, structured data usage
+Evaluate title clarity, heading hierarchy, answer-first structure, descriptive links, page purpose, entity disambiguation, author/company evidence where relevant, media accessibility, internal-link pathways, breadcrumbs, URL consistency, and conversion continuity. Recommendations must fit actual templates and user intent.
 
-## Output
+### 6. Page experience
 
-### Executive Summary
+Use field data first when available. Diagnose LCP, INP and CLS at page-type level, then use Lighthouse and DevTools to identify causes. Include accessibility, mobile usability, HTTPS, intrusive interstitials, visual stability and interaction quality without reducing the analysis to a single score.
 
-Open with a 3-5 sentence summary of overall SEO health. Highlight:
-- The site's biggest strength
-- The top 3 priorities that will have the most impact
-- An overall assessment: strong foundation, needs work, or critical issues
+### 7. Structured data
 
-### Keyword Opportunity Table
+Use only supported types that match visible page content. Validate syntax, required/recommended properties, eligibility rules, policy compliance and template coverage. Treat Schema.org vocabulary and Google rich-result eligibility as related but distinct.
 
-| Keyword | Est. Difficulty | Opportunity Score | Current Ranking | Intent | Recommended Content Type |
-|---------|----------------|-------------------|-----------------|--------|--------------------------|
+### 8. Validation and monitoring
 
-Opportunity score: high, medium, or low — based on the combination of search demand, difficulty, and relevance to the user's business.
+For every major change define hypothesis, affected templates, expected leading and lagging indicators, deployment date, validation method, rollback condition, and review window. Compare equivalent periods and annotate seasonality, campaigns, migrations and algorithmic volatility.
 
-Include 15-25 keyword opportunities, sorted by opportunity score.
+## Professional repository router
 
-### On-Page Issues Table
+Use the five selected repositories according to purpose; inspect their current README, release activity, issues and implementation before reusing anything:
 
-| Page | Issue | Severity | Recommended Fix |
-|------|-------|----------|-----------------|
+1. `GoogleChrome/lighthouse` — reproducible performance, accessibility, best-practice and basic SEO diagnostics.
+2. `harlan-zw/unlighthouse` — site-wide Lighthouse crawling and aggregated template diagnostics.
+3. `StJudeWasHere/seonaut` — open-source technical crawler and issue inventory.
+4. `eliasdabbas/advertools` plus `eliasdabbas/seo-audit-and-analysis` — programmatic crawling, robots/sitemap/log/SERP analysis and reproducible notebooks.
+5. `AgriciDaniel/claude-seo` — LLM-native orchestration patterns, falsifiability and specialist coverage. Treat it as a workflow reference, not a source of search-engine truth.
 
-Severity levels:
-- **Critical** — directly hurting rankings or preventing indexation
-- **High** — significant impact on SEO performance
-- **Medium** — best practice violation, moderate impact
-- **Low** — minor optimization opportunity
+Additional candidates may be evaluated, but they do not replace this core set without checking maintenance, licensing, security, evidence quality and overlap. See `references/source-registry.md`.
 
-### Content Gap Recommendations
+## Required output
 
-For each content gap identified, provide:
-- **Topic or keyword** to target
-- **Why it matters** — search demand, competitor coverage, funnel stage
-- **Recommended format** — blog post, landing page, guide, comparison page, etc.
-- **Priority** — high, medium, or low
-- **Estimated effort** — quick win (1-2 hours), moderate (half day), substantial (multi-day)
+Deliver:
 
-### Technical SEO Checklist
+1. **Executive finding** with the most likely constraint and business consequence.
+2. **Evidence ledger** with source, observed fact, date, confidence and limitation.
+3. **Issue table** with URL/template, evidence, severity, impact, recommended action and validation.
+4. **Prioritized roadmap** split into blockers, high-leverage improvements and experiments.
+5. **Implementation notes** with owners, dependencies and acceptance criteria.
+6. **Measurement plan** with baseline, KPIs, segmentation and review dates.
+7. **Sources consulted**, including exact official Google pages and repository references.
 
-| Check | Status | Details |
-|-------|--------|---------|
+Use severity based on demonstrated impact:
 
-Status: Pass, Fail, or Warning.
+- **Critical:** prevents access, indexation, canonical consolidation, legal/safety compliance, or core conversion.
+- **High:** affects a major template, high-value demand, or broad user experience.
+- **Medium:** supported opportunity with limited scope or uncertain magnitude.
+- **Low:** hygiene or experiment, not a ranking emergency.
 
-### Competitor Comparison Summary
+## Completion gate
 
-| Dimension | Your Site | Competitor A | Competitor B | Winner |
-|-----------|-----------|--------------|--------------|--------|
+Do not call the strategy optimized until:
 
-Include rows for: keyword count, content depth, publishing frequency, backlink signals, technical score, SERP feature presence.
-
-### Prioritized Action Plan
-
-Split recommendations into two categories:
-
-**Quick Wins (do this week):**
-- Actions that take under 2 hours and have immediate impact
-- Examples: fix title tags, add meta descriptions, fix broken links, add alt text
-
-**Strategic Investments (plan for this quarter):**
-- Actions that require more effort but drive long-term growth
-- Examples: build a topic cluster, create a pillar page, launch a link-building campaign, overhaul site structure
-
-For each action item, include:
-- What to do (specific and concrete)
-- Expected impact (high, medium, low)
-- Effort estimate
-- Dependencies (if any)
-
-## Follow-Up
-
-After presenting the audit, ask:
-
-"Would you like me to:
-- Draft content briefs for the top keyword opportunities?
-- Create optimized title tags and meta descriptions for your key pages?
-- Build a content calendar based on the gap analysis?
-- Dive deeper into any specific section of the audit?
-- Run this same analysis for a different competitor or domain?"
+- current Google documentation was checked;
+- live evidence or explicit missing-data limitations are shown;
+- recommendations are prioritized by business impact and confidence;
+- no unsupported guarantee is made;
+- implementation has acceptance tests and monitoring;
+- GEO implications were routed to `geo-ai-discovery` when applicable.
