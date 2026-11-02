@@ -6,7 +6,7 @@ argument-hint: [company-name-or-url]
 
 # Job Scan Workflow
 
-**Load and execute:** `workflows/job-scan/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow operates in two modes:
 

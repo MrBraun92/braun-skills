@@ -5,7 +5,7 @@ description: Craft a compelling LinkedIn profile through adversarial review. Opt
 
 # LinkedIn Profile Review Workflow
 
-**Load and execute:** `workflows/linkedin-review/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

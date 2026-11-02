@@ -5,7 +5,7 @@ description: Operational gate that prevents an agent (or the user) from declarin
 
 # Verification Before Completion
 
-A discipline gate. The single most common failure mode of AI-assisted coding is the agent declaring "done" based on optimism rather than evidence. This skill blocks that pattern: completion requires *artifacts* — passing build, passing tests, screenshots of changed UI, clean lint, no console errors, no regressions in the area touched. Built for EventPro (`pnpm tsc --noEmit` and `pnpm test` are the canonical gates per CLAUDE.md §15) but the principle generalizes.
+A discipline gate. The single most common failure mode of AI-assisted coding is the agent declaring "done" based on optimism rather than evidence. This skill blocks that pattern: completion requires *artifacts* — passing build, passing tests, screenshots of changed UI, clean lint, no console errors, no regressions in the area touched. Built for EventPro (typecheck and `pnpm test` are the canonical gates; the live repo is `eventpro-v2`, whose scripts are `check`, `test`, `test:integration` — confirm in `package.json`) but the principle generalizes.
 
 ## When to use this skill
 - An agent is about to write "Done" / "Complete" / "Ready to merge" / "Pronto".
@@ -29,8 +29,9 @@ This list scopes the verification effort. A 3-line typo fix needs less verificat
 
 ### Step 2: Run the canonical gates
 For EventPro, the canonical gates per CLAUDE.md §15:
-- `pnpm tsc --noEmit` — must return 0 errors.
-- `pnpm test` — must return 260/260 passing (or current expected count post-Sprint 7).
+- `pnpm check` (v2) ou `pnpm tsc --noEmit` — 0 erros. Confirme o script real em `package.json`.
+- `pnpm test` — 0 falhas. **Nunca digite nem cite um total esperado de memória.** Leia o total do próprio output e compare com a linha de base medida no `main` (ou no HEAD da base da PR) pelo mesmo comando; qualquer diferença de total precisa de explicação (testes adicionados/removidos) antes do GO.
+- `pnpm test:integration` (v2) — rode quando a mudança toca banco, autorização ou escopo por aba.
 - `pnpm build` — must complete without errors.
 - `pnpm lint` — if configured, must pass.
 
@@ -44,6 +45,7 @@ If any gate fails: STOP. The task is not done. Surface the failure with full out
 - Endpoint hit at least once via `pnpm dev` + browser network tab OR via direct request.
 - Response shape matches the expected output.
 - Authorization guard is present (`requireWorkspaceAccess`, `requireEventAccess`, `requireEventEditAccess`, or `requireWorkspaceRole` per CLAUDE.md §6).
+- **v2 — escopo por aba:** endpoint que devolve dados de uma aba chama `requireTabAccess` (além de `requireEventAccess`); convidado com `allowedTabs` não pode ler outras abas nem pela API; a permissão efetiva é a MAIOR entre papel no workspace e concessão no evento. Rode `server/tabScopeCoverage.test.ts` e confirme que o endpoint novo está coberto.
 - Soft-delete filter present (`isNull(events.deletedAt)`) where applicable.
 - Dashboard invalidation called from frontend mutations that affect financials (per CLAUDE.md §7).
 
@@ -82,6 +84,9 @@ Produce a single deliverable that contains:
 - Brief test plan: what the user should manually click to confirm.
 - Anything that's NOT verified — surface honestly.
 
+### Step 5b: Independência
+Quem executou a mudança não emite o veredito final dela. Em fluxos com orquestração agêntica, a verificação final é de um revisor em contexto separado com poder de reprovar; se o mesmo agente fez tudo, declare `SELF_REVIEW` no veredito e diga o que ficou sem verificação independente.
+
 ### Step 6: Issue the verdict
 One of:
 - **GO** — all gates passed, manual checks done, evidence attached. Safe to commit / merge / deploy.
@@ -96,7 +101,7 @@ For meaningful changes (anything beyond a typo), append a short verification log
 ```
 Verification:
 - pnpm tsc --noEmit: 0 errors
-- pnpm test: 260/260 passing
+- pnpm test: <passou>/<total> medido agora; base no main: <total medido>
 - Manual: Dashboard renders KPIs correctly; budget reorder DnD works in infraestrutura tab.
 - Screenshots attached.
 ```
@@ -118,7 +123,7 @@ This makes the next reviewer's job easier and creates an audit trail.
 | Gate | Result | Output (last lines) |
 |---|---|---|
 | pnpm tsc --noEmit | PASS / FAIL | ... |
-| pnpm test | 260/260 PASS / X FAIL | ... |
+| pnpm test | <passou>/<total> PASS / X FAIL (base main: <total>) | ... |
 | pnpm build | PASS / FAIL | ... |
 | pnpm lint | PASS / FAIL / N/A | ... |
 
@@ -159,7 +164,7 @@ This makes the next reviewer's job easier and creates an audit trail.
 ## Notes for the assistant
 - This is a **gate**, not a checklist to optionally complete. If the gate fails, the task is not done — full stop. Do not soften the verdict to spare feelings.
 - The user (Oliver) explicitly works in a parallel-agent setup (Claude + Manus + GPT). Other agents may run ahead and declare success. This skill is the brake.
-- For EventPro: the test count moves with sprints. CLAUDE.md says 260/260 post-Sprint 7. If the count is different, reconcile (someone added/removed tests) BEFORE issuing GO.
+- For EventPro: o total de testes muda a cada PR. Meça a base no `main` com o mesmo comando; se o total divergir do esperado pela PR, reconcilie (alguém adicionou/removeu testes) ANTES de emitir GO. Contagens nunca são digitadas: vêm do output.
 - For UI changes: a verbal description of what the user should see is NOT a screenshot. If you cannot capture a screenshot, explicitly say "screenshot pending — user should manually verify component renders" and downgrade to NO-GO or GO-with-notes.
 - "I'm confident this works" without evidence is exactly what this skill exists to block.
 - For database migrations on TiDB Cloud: extra caution — TiDB has different DDL semantics than vanilla MySQL. Verify the migration ran successfully via the TiDB console before claiming GO.

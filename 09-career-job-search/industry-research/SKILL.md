@@ -6,7 +6,7 @@ argument-hint: [optional-industry-focus]
 
 # Industry Research Workflow
 
-**Load and execute:** `workflows/industry-research/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

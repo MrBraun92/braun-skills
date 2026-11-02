@@ -6,7 +6,7 @@ argument-hint: [resume-file-path]
 
 # Init Workflow
 
-**Load and execute:** `workflows/init/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

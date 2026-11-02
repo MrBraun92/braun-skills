@@ -127,4 +127,3 @@ Este skill orquestra e delega para:
 ## Referências
 
 - Para frameworks de negociação salarial: ver references/salary-negotiation.md
-- Para análise de mercado por área tech: ver references/tech-market-analysis.md

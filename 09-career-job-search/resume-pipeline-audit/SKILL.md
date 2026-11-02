@@ -1,11 +1,11 @@
 ---
-name: audit
+name: resume-pipeline-audit
 description: Run a system audit to verify core workflows are functioning correctly. Uses sample data to test the `init` -> `job-scan` -> `tailor-resume` pipeline.
 ---
 
 # Audit Workflow
 
-**Load and execute:** `workflows/audit/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

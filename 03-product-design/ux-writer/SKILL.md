@@ -281,3 +281,9 @@ Typical adjacent skills:
 * **Interface Designer**
 * **Accessibility Auditor**
 * **Product Strategist**
+
+## Relação com `ux-copy` e vocabulário PT-BR do EventPro
+
+- `ux-writer` (esta skill) **revisa** texto de interface existente com escala de severidade e fronteiras de escopo; `ux-copy` **escreve** microcopy novo a partir de um briefing. Para texto novo, comece por `ux-copy`; para auditar o resultado ou a tela existente, use esta.
+- Em produtos de Oliver (EventPro e sites de cliente), a interface é **100% PT-BR**: nenhum texto visível em inglês, datas no formato brasileiro, moeda BRL.
+- Ações destrutivas usam diálogo de confirmação próprio (nunca `confirm()` nativo); toasts curtos; vocabulário financeiro e de colaboração consistente com o produto. Confirme a lista vigente no repositório do produto antes de aplicar.

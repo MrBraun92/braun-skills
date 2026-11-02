@@ -5,7 +5,7 @@ description: Strategic review of your Resume Corpus against market data. Identif
 
 # Corpus Review Workflow
 
-**Load and execute:** `workflows/corpus-review/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

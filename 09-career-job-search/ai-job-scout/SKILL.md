@@ -111,4 +111,3 @@ Score acima de 75% = candidatura forte | 50-75% = gaps identificáveis | abaixo 
 ## Referências
 
 - Para análise detalhada de requisitos por cargo: ver references/ai-roles-requirements.md
-- Para lista de empresas AI por região: ver references/ai-companies-by-region.md

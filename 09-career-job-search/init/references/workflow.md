@@ -562,6 +562,6 @@ After this workflow completes successfully:
 2. Present the suggestion conversationally:
    "Great, your Resume Corpus is set up! Let's capture your job search preferences next — salary expectations, location, remote preferences, and dealbreakers. Ready to start the scoping interview? [Yes/No/Something else]"
 
-3. If user agrees: Load `workflows/scoping-interview/workflow.md` and execute
+3. If user agrees: Load `../scoping-interview/references/workflow.md` and execute
 4. If user declines: Summarize what was accomplished and end gracefully
 5. If user requests different workflow: Honor their request
