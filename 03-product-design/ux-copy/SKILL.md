@@ -104,3 +104,7 @@ If **~~design tool** is connected:
 1. **Be specific about context** — "Error message when payment fails" is better than "error message."
 2. **Share your brand voice** — "We're professional but warm" helps me match your tone.
 3. **Consider the user's emotional state** — Error messages need empathy. Success messages can celebrate.
+
+## Relação com `ux-writer` e idioma
+
+Esta skill **escreve** microcopy novo. Para **auditar** texto já existente (severidade, fronteiras, composição com outras lentes) use `ux-writer`. Em produtos de Oliver a interface é PT-BR; escreva as variantes em português do Brasil e só inclua inglês se o briefing pedir.

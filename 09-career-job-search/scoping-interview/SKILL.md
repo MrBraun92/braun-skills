@@ -5,7 +5,7 @@ description: Capture your job search preferences through a conversational interv
 
 # Scoping Interview Workflow
 
-**Load and execute:** `workflows/scoping-interview/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

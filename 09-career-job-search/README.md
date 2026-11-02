@@ -19,6 +19,7 @@ Este diretório reúne as **Agent Skills** especializadas em estratégia de carr
 | [hidden-job-hunter](./hidden-job-hunter/SKILL.md) | >- |
 | [industry-research](./industry-research/SKILL.md) | Research and tier industries by fit with your profile. Identifies where your skills are most valued and hiring trends are strongest. |
 | [init](./init/SKILL.md) | Initialize your job search project. Imports your resume(s), creates the Resume Corpus, and sets up directory structure. |
+| [resume-pipeline-audit](./resume-pipeline-audit/SKILL.md) | Diagnóstico do pipeline init → job-scan → resume-tailoring com dados de exemplo (antes chamada `audit`). |
 | [job-coach](./job-coach/SKILL.md) | Load Max, the veteran recruiter persona for resume advice, interview prep, and adversarial feedback. |
 | [job-scan](./job-scan/SKILL.md) | Search for jobs at a company or parse a specific job posting. |
 | [job-scout](./job-scout/SKILL.md) | Market intelligence for job discovery and company evaluation. |
@@ -49,6 +50,7 @@ This directory contains **Agent Skills** specialized in career strategy, resume 
 | [hidden-job-hunter](./hidden-job-hunter/SKILL.md) | >- |
 | [industry-research](./industry-research/SKILL.md) | Research and tier industries by fit. |
 | [init](./init/SKILL.md) | Initialize the job search project and Resume Corpus. |
+| [resume-pipeline-audit](./resume-pipeline-audit/SKILL.md) | Diagnóstico do pipeline (antes `audit`). |
 | [job-coach](./job-coach/SKILL.md) | Recruiter-style resume and interview guidance. |
 | [job-scan](./job-scan/SKILL.md) | Search companies or parse job postings. |
 | [job-scout](./job-scout/SKILL.md) | Job-market intelligence and opportunity discovery. |

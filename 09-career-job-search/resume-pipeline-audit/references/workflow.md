@@ -6,8 +6,8 @@
 **Agent:** Job Coach (Max) & Job Scout
 **Phase:** system
 **Reads:**
-- `workflows/audit/sample_data/sample_resume.md` — Sample resume for testing
-- `workflows/audit/sample_data/sample_job_description.txt` — Sample job posting for testing
+- `references/sample_data/sample_resume.md` — Sample resume for testing
+- `references/sample_data/sample_job_description.txt` — Sample job posting for testing
 **Creates:** None (temporary files are cleaned up)
 **Updates:** None
 **Prerequisites:** None
@@ -41,8 +41,8 @@ This workflow provides a consistent way to test the core functionality of the Jo
 **Instruction:** This step is unchanged. It creates a temporary corpus from sample data to test the parsing logic of the `init` workflow.
 
 1.  **- [ ] Load sample data:**
-    -   Read `workflows/audit/sample_data/sample_resume.md`.
-    -   Read `workflows/audit/sample_data/sample_job_description.txt`.
+    -   Read `references/sample_data/sample_resume.md`.
+    -   Read `references/sample_data/sample_job_description.txt`.
 
 2.  **- [ ] Create temporary Resume Corpus:**
     -   **Instruction:** Using the logic from the `init` workflow, parse the sample resume into a structured JSON and save it to `profile/audit_corpus.json`.

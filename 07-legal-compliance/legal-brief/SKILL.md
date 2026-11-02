@@ -1,9 +1,9 @@
 ---
-name: brief
+name: legal-brief
 description: Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of legal-relevant items across email, calendar, and contracts, when researching a specific legal question across internal sources, or when a developing situation (data breach, litigation threat, regulatory inquiry) needs rapid context.
 ---
 
-# /brief -- Legal Team Briefing
+# Legal Team Briefing (comando /brief)
 
 > If you see unfamiliar placeholders or need to check which tools are connected, see [CONNECTORS.md](../../CONNECTORS.md).
 

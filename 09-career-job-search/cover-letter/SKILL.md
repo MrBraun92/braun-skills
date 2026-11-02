@@ -6,7 +6,7 @@ argument-hint: [company-name]
 
 # Cover Letter Workflow
 
-**Load and execute:** `workflows/cover-letter/workflow.md`
+**Load and execute:** `references/workflow.md`
 
 Read the entire workflow file and execute it step by step. This workflow:
 

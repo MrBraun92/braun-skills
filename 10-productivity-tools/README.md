@@ -21,9 +21,9 @@ Este diretório reúne as **Agent Skills** especializadas em produtividade geral
 | [skill-creator](./skill-creator/SKILL.md) | Guide for creating or updating skills that extend Manus via specialized knowledge, workflows, or tool integrations. For any modification or improve... |
 | [skill-installer](./skill-installer/SKILL.md) | Install new Manus skills from a GitHub repository or create them from scratch, ending with the delivery of Add-to-My-Skills cards so the user can s... |
 | [skill-router](./skill-router/SKILL.md) | 'Read this skill IMMEDIATELY in two situations: (1) whenever the user asks Claude to use its installed skills in any language — "use suas skills", ... |
-| [start](./start/SKILL.md) | Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from you... |
+| [productivity-start](./productivity-start/SKILL.md) | Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from you... |
 | [transcript-fixer](./transcript-fixer/SKILL.md) | Corrige transcrições automáticas geradas por Teams, Tactiq, Otter, Copilot e similares — insere pontuação, separa por speaker, remove muletas verba... |
-| [update](./update/SKILL.md) | Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale ... |
+| [productivity-update](./productivity-update/SKILL.md) | Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale ... |
 | [voice-memo-to-doc](./voice-memo-to-doc/SKILL.md) | Recebe áudio ou transcrição de 5 a 15 minutos de fala solta sobre uma ideia e devolve documento estruturado — problema, hipótese, próximos passos, ... |
 
 ### Como usar
@@ -51,9 +51,9 @@ This directory contains **Agent Skills** specialized in general productivity, do
 | [skill-creator](./skill-creator/SKILL.md) | Guide for creating or updating skills that extend Manus via specialized knowledge, workflows, or tool integrations. For any modification or improve... |
 | [skill-installer](./skill-installer/SKILL.md) | Install new Manus skills from a GitHub repository or create them from scratch, ending with the delivery of Add-to-My-Skills cards so the user can s... |
 | [skill-router](./skill-router/SKILL.md) | 'Read this skill IMMEDIATELY in two situations: (1) whenever the user asks Claude to use its installed skills in any language — "use suas skills", ... |
-| [start](./start/SKILL.md) | Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from you... |
+| [productivity-start](./productivity-start/SKILL.md) | Initialize the productivity system and open the dashboard. Use when setting up the plugin for the first time, bootstrapping working memory from you... |
 | [transcript-fixer](./transcript-fixer/SKILL.md) | Corrige transcrições automáticas geradas por Teams, Tactiq, Otter, Copilot e similares — insere pontuação, separa por speaker, remove muletas verba... |
-| [update](./update/SKILL.md) | Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale ... |
+| [productivity-update](./productivity-update/SKILL.md) | Sync tasks and refresh memory from your current activity. Use when pulling new assignments from your project tracker into TASKS.md, triaging stale ... |
 | [voice-memo-to-doc](./voice-memo-to-doc/SKILL.md) | Recebe áudio ou transcrição de 5 a 15 minutos de fala solta sobre uma ideia e devolve documento estruturado — problema, hipótese, próximos passos, ... |
 
 ### How to Use

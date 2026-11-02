@@ -10,9 +10,8 @@ Este diretório reúne as **Agent Skills** especializadas em revisão jurídica,
 
 | Skill | Descrição |
 |---|---|
-| [audit](./audit/SKILL.md) | Run a system audit to verify core workflows are functioning correctly. Uses sample data to test the `init` -> `job-scan` -> `tailor-resume` pipeline. |
 | [audit-orchestrator](./audit-orchestrator/SKILL.md) | Use for comprehensive multi-skill product audits that require coordinating multiple specialist lenses, consolidating findings, removing duplication... |
-| [brief](./brief/SKILL.md) | Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of l... |
+| [legal-brief](./legal-brief/SKILL.md) | Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of l... |
 | [close-management](./close-management/SKILL.md) | Manage the month-end close process with task sequencing, dependencies, and status tracking. Use when planning the close calendar, tracking close pr... |
 | [compliance-check](./compliance-check/SKILL.md) | Run a compliance check on a proposed action, product feature, or business initiative, surfacing applicable regulations, required approvals, and ris... |
 | [compliance-tracking](./compliance-tracking/SKILL.md) | Track compliance requirements and audit readiness. Trigger with "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement",... |
@@ -45,9 +44,8 @@ This directory contains **Agent Skills** specialized in legal review, compliance
 
 | Skill | Description |
 |---|---|
-| [audit](./audit/SKILL.md) | Run a system audit to verify core workflows are functioning correctly. Uses sample data to test the `init` -> `job-scan` -> `tailor-resume` pipeline. |
 | [audit-orchestrator](./audit-orchestrator/SKILL.md) | Use for comprehensive multi-skill product audits that require coordinating multiple specialist lenses, consolidating findings, removing duplication... |
-| [brief](./brief/SKILL.md) | Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of l... |
+| [legal-brief](./legal-brief/SKILL.md) | Generate contextual briefings for legal work — daily summary, topic research, or incident response. Use when starting your day and need a scan of l... |
 | [close-management](./close-management/SKILL.md) | Manage the month-end close process with task sequencing, dependencies, and status tracking. Use when planning the close calendar, tracking close pr... |
 | [compliance-check](./compliance-check/SKILL.md) | Run a compliance check on a proposed action, product feature, or business initiative, surfacing applicable regulations, required approvals, and ris... |
 | [compliance-tracking](./compliance-tracking/SKILL.md) | Track compliance requirements and audit readiness. Trigger with "compliance", "audit prep", "SOC 2", "ISO 27001", "GDPR", "regulatory requirement",... |
